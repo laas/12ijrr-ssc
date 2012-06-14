@@ -1,0 +1,50 @@
+\begin{tikzpicture}[domain=0:12,x=0.07\linewidth,y=1.7cm]
+  
+
+
+  \draw [->] (0,-1.1) -- (12,-1.1)  ;
+  \draw [->] (0,-1.1) -- (0,1.2) ;
+
+  \node [left] (l1) at (0,-1) {$-L$};
+  \node [left] (l2) at (0,1)  {$L$};
+  \node [left] (0) at (0,0) {$0$};
+  \node [below right] (t) at (12,-1.1) {time};
+  \node [left] (e1) at (0,0.2) {$\epsilon$};
+  \node [left] (e2) at (0,-0.2) {$-\epsilon$};
+
+  \draw [thin, color=lightgray] (0,-1) -- (12,-1);
+  \draw [thin, color=lightgray] (0,1) -- (12,1);
+  \draw [thin, color=lightgray] (0,-0.2) -- (12,-0.2);
+  \draw [thin, color=lightgray] (0,0.2) -- (12,0.2);
+  
+
+  \node [below] (0t) at (0,-1.1) {$0$};
+  \node [below] (t1) at (5,-1.1) {$T_1$};
+
+  \draw plot[only marks, mark=+] coordinates {(0,0) (0,-0.2) (0,0.2)
+    (0,-1) (0,1) (5,-1.1)};
+
+  \node [above left] at (0,1.1) {$y$};
+
+  \node [right,color=red] at (11,0) {CoM};
+  \node [right,color=blue] at (11,0.8) {ZMP};
+  
+  
+  \draw [domain=0:5,thick,smooth,samples=100,color=red] plot[id=1] 
+  function{0.2*(0.0048*x**4 - 0.064*x**3+0.24*x**2)*sin(6*x)};
+
+  \draw [domain=5:11,thick,smooth,samples=100,color=red] plot[id=2]
+  function{0.2* sin(6*x)};
+
+  \draw [domain=0:5,thick,dashed, smooth,samples=100,color=blue] plot[id=3]
+  function{
+    (0.92*(0.0048*x**4 - 0.064*x**3 +0.24*x**2))*sin(6.*x)
+    -(0.02*(0.0576*x**2-0.384*x+.48))*sin(6.*x)-(0.24*(0.0192*x**3-.192*x**2+.48*x))*cos(6.*x)
+};
+
+  \draw[domain=5:11,thick,dashed, smooth,samples=100,color=blue]  plot[id=4]
+  function{sin(6*x)};
+
+
+
+\end{tikzpicture}
