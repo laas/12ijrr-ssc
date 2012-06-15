@@ -97,7 +97,8 @@ method.
 This work is based on several fields of humanoid robotics
 research: prioritized inverse kinematics, randomized  whole-body  motion
 planning and walk pattern generators based on the Zero-Momentum
-Point (ZMP) formalism. This section summarizes the related work for each of them.
+Point (ZMP) formalism. This section summarizes the literature related to each of 
+these fields.
 
 \subsection{Prioritized Inverse Kinematics}
 
@@ -128,7 +129,8 @@ techniques  to solve  global planning  problems. In  the  past fifteen
 years,  \textit{Probabilistic Roadmaps} \cite{kavraki1996prp} and  
 \textit{Rapidly exploring Random  Trees} (RRT) 
 \cite{kuffner00rrtconnect}  have been  developed and  used to  solve many
-high-dimensional   planning  problems.
+high-dimensional   planning  problems, see \cite{Lav06} and \cite{choset2005prm} for comprehensive
+overviews.
 When  using  sampling  techniques  on  a humanoid  robot,  another difficulty
 is to  take into  account stability  constraints,  i.e. to
 generate  random  configurations   on  zero  volume  submanifolds  of
@@ -172,8 +174,9 @@ converge.
 Simplifying  the environment  consists in  considering obstacles  at a
 footstep   level only.   \cite{kuffner2001footstep,chestnutt2005footstep,kuffner2005motion}
 use   an  A$^{*}$   algorithm  to   find
-collision-free   footsteps.    In   \cite{perrinbiped},   the   authors   compute
-collision-free motions  for the legs by using  an RRT$^{*}$ algorithm. 
+collision-free   footsteps.    In   \cite{perrin2012fast},   the   authors   compute
+dynamic walking motions avoiding collisions at the leg level
+by using  an RRT algorithm. 
 
 Some planning methods for free-climbing robots \cite{bretl2006motion}
 can be seen as a general way 
@@ -182,9 +185,12 @@ humanoid dynamically stable locomotion.
 Other recent contributions to the field of locomotion planning  include algorithms 
 considering the dynamics at the planning phase \cite{shkolnik2011bounding}. This leads to 
 a growth of algorithmic complexity, particularly costly for high-dimensional
-systems such as humanoid robots. In our work, we show that it is not always
+systems such as humanoid robots. To the authors knowledge such techniques have not been
+used on humanoid robotic platforms so far.
+In our work, we show that it is not always
 necessary to take into account dynamics while planning, even though the final
-output of our algorithm is a dynamically stable walk motion.
+output of our algorithm is a dynamically stable walk motion. This result was first
+presented in \cite{dalibard2011small}.
 
 
 
@@ -770,7 +776,10 @@ in the following.
 
 The idea of this proof is to use the form of Eq. (\ref{eq:walk-zmp}) to
 apply a  scaling factor between  the amplitude of the  oscillations of
-the CoM and of the ZMP. For $\omega >0$, assuming the CoM follows the trajectory
+the CoM and of the ZMP. The faster the CoM oscillates, the bigger is the amplitude
+of the ZMP oscillations. Following is a formalization of this  idea.
+
+For $\omega >0$, assuming the CoM follows the trajectory
 $y(t) = \epsilon \sin(\omega t)$,  Eq. (\ref{eq:walk-zmp}) gives:
 \[
 p_y(t) =
@@ -862,6 +871,7 @@ in any direction, while keeping the CoM inside an arbitrarily small neighborhood
 the proof.
 \end{proof}
 
+
 \subsubsection{Remarks}
 \paragraph{Generalization to a complete model:} More work is needed to generalize 
 the previous proof to any legged robot model. First, because we use a model where
@@ -884,11 +894,12 @@ the beginning and end of the locomotion. In the actual implementation,
 we have chosen  to generate  CoM motions with  a ZMP preview  controller, as
 presented in \cite{kajita2003biped}.  We  have observed experimentally that the
 amplitude of  CoM trajectories decreases  when the frequency  of steps
-increases. Our current ZMP preview controller relies on the cart-table simplified model.
+increases. Our current ZMP preview controller relies on the cart-table model approximation.
 To make this approximation valid, we fix the height of the robot CoM during walk,
 as well as the vertical orientation of the robot waist. These geometric constraints 
-are also applied when planning a statically stable path. Note that this is
-due to our current implementation of ZMP preview controller, and does not affect
+are also applied when planning statically stable paths, to ensure that the paths
+can be approximated by dynamic walk trajectories. Note that this is
+due to our current  ZMP preview controller implementation, and does not affect
 the generality of the small-space controllability result presented above.
 
 \paragraph{Speed of CoM:} The theoretical result presented in this section implies
@@ -912,11 +923,11 @@ physical capacities of the robot.
 The  algorithm   that  animates  a  statically  stable   path  into  a
 dynamically stable  walk trajectory has been inspired  by the previous
 small-space controllability  proof.
-Given a statically  stable path $p$,
+Given a statically  stable path $p$ respecting the cart-table model approximation constraints,
 we  start  by placing  footsteps  corresponding  to  the nominal  walk
 pattern  of the  robot. Given the footsteps, we  compute a ZMP trajectory, 
-and a preview controller outputs  a corresponding CoM trajectory, using
-the cart-table model. The stack of tasks applied to
+and a preview controller outputs  a corresponding CoM trajectory. 
+The stack of tasks applied to
 the robot to generate a dynamic walk motion is -- in decreasing priority order:
 
 \begin{enumerate}
@@ -929,8 +940,8 @@ the robot to generate a dynamic walk motion is -- in decreasing priority order:
 
 \item Verticality of the waist,
 
-\item Upper-body configuration task towards corresponding
-  configuration  of $p$.
+\item Configuration task towards corresponding
+  configuration  in $p$.
 
 \end{enumerate}
 
@@ -1011,14 +1022,14 @@ of the first two problems. We present the average results of these trials.
 
 \subsection{Passing between two chairs}
 
-The environment shown in Fig. \ref{fig:couv} and \ref{fig:sliding} was
-presented in \cite{el2011path}. The  authors solved it by using a bounding
+The environment shown in Fig. \ref{fig:couv} and \ref{fig:sliding} has been
+first presented in \cite{el2011path}. It was solved by using a bounding
 box method, leading the robot to walk sideways between the two chairs.
-Our method generated a locomotion  trajectory in which the robot walks
-forward, which could be required if the robot has to use vision during
-locomotion for  example. The first planning stage  required 29.6~s
+Our method generates a locomotion  trajectory in which the robot walks
+forward, which may be required if the robot has to use vision during
+locomotion. The first planning stage  requires 29.6~s
 on  average.   The  animation  of   the  sliding  path   presented  in
-Fig.   \ref{fig:sliding}    used   66.5~s  of  computation   time.
+Fig.   \ref{fig:sliding}   uses  66.5~s  of  computation   time.
 
 
 \begin{figure}[h!]
@@ -1065,9 +1076,9 @@ In the environment shown in Fig. \ref{fig:cluttered}, the robot
 has to find a way among floating obstacles. In this
 environment neither bounding box nor footstep planning strategies
 could find a collision-free walk trajectory.
-The first planning stage required
+The first planning stage requires
 184.3~s on average, and the animation of the trajectory presented in 
-Fig.~\ref{fig:cluttered} used 339.5~s of computation time. Fig.~\ref{fig:cluttered-waist} 
+Fig.~\ref{fig:cluttered} uses 339.5~s of computation time. Fig.~\ref{fig:cluttered-waist} 
 shows the robot CoM trajectory during locomotion.
 
 \begin{figure}[h!]
@@ -1084,9 +1095,9 @@ shows the robot CoM trajectory during locomotion.
 
 In the problem shown in Fig. \ref{fig:shelf} the robot has to put a ball on a
 shelf, in a constrained apartment environment. The final configuration is defined 
-implicitly as a desired hand position. We generated automatically goal configurations 
-solving the task, as described in Section~\ref{sec:wb} . Then, we 
-applied our planner to generate a whole-body walk motion that solved the hand reaching
+implicitly as a desired hand position. We have generated automatically goal configurations 
+solving the task, as described in Section~\ref{sec:wb} . Then, we have
+applied our planner to generate a whole-body walk motion that solves the hand reaching
 task. 
 
 The solution sliding path is constrained between the table on the right and the lamp
@@ -1098,7 +1109,6 @@ Fig.~\ref{fig:shelf} shows the resulting walk motion and Fig.~\ref{fig:shelf-wai
 shows the robot CoM trajectory during locomotion. Extension 3 presents a 
 comprehensive video of this problem, including the motion execution on
 the real robot HRP-2.
-
 
 
 \begin{figure}[h]
