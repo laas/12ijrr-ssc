@@ -130,7 +130,7 @@ years,  \textit{Probabilistic Roadmaps} \cite{kavraki1996prp} and
 \cite{kuffner00rrtconnect}  have been  developed and  used to  solve many
 high-dimensional   planning  problems.
 When  using  sampling  techniques  on  a humanoid  robot,  another difficulty
-difficulty  is to  take into  account stability  constraints,  i.e. to
+is to  take into  account stability  constraints,  i.e. to
 generate  random  configurations   on  zero  volume  submanifolds  of
 $\mathcal{C}$. This problem has been investigated with success during
 the last few years, \cite{Berenson15032011} presents a exhaustive survey
@@ -211,7 +211,7 @@ differs from classic configuration space approaches in two ways:
 \begin{enumerate}
 \item the set of valid configurations is defined implicitly, as the ones satisfying a given 
   set of inverse kinematic tasks;
-\item the goal is also defined implicitely, by another set of inverse kinematic tasks.
+\item the goal is also defined implicitly, by another set of inverse kinematic tasks.
 \end{enumerate}
 In this presentation, we use a prioritized inverse kinematic solver, or local planner,
  as a black box. We will not describe the details of its implementation. They are presented in 
@@ -229,7 +229,7 @@ tasks and constraints for various reasons:
   or gaze direction.
 \item Configuration task: our adaptation of randomized motion planning algorithms 
   uses tasks defined as the distance towards a given configuration in $\mathcal{C}$. 
-  This will be detailed in the following of the section.
+  This will be detailed in the following section.
 \end{itemize}
 
 
@@ -519,11 +519,11 @@ Extension 1 presents a video of this motion.
 
 
 The motion presented in Fig.~\ref{fig:wb-shelves} looks very complicated.
-The reasons are that the environment is complex and HRP-2 kinematic chain is highly constrained.
+The reasons are that the environment is complex and HRP-2 kinematic tree is highly constrained.
 The motion has been optimized based on these constraints. Note that the
 accessibility space of this robot is not wide enough to accomplish this task further 
 away from the shelves, which could have eased the motion. One possibility to extend the
-robot accessibility space is to automatically change the support polygon to solve the task.
+robot accessibility space is to automatically change the support polygon durint the motion to solve the task.
 This is an ongoing research field, \cite{OussamaKanoun06102010} proposes some 
 local solutions. This has not been integrated in our global planning algorithm yet.
 
@@ -562,7 +562,7 @@ This section presents a \textit{constructive} proof that any such statically sta
 collision-free path for a legged robot sliding
 on the ground can be approximated by a collision-free dynamic walk trajectory.
 The proof is based on ideas from control theory, in particular small-space 
-controllability. It also uses the fact that balanced criteria for dynamic walk are different
+controllability. It also uses the fact that balance criteria for dynamic walk are different
 from the ones for static stability. An important point is that our result and method do not hold
 for a biped robot that walks in a quasi-static way. 
 
@@ -579,9 +579,9 @@ approximate collision-free statically stable paths by dynamic walk trajectories.
 A  robotic system  is  controllable  if  for any two  configurations
 $q_1$ and $q_2$,  there exists  a
 trajectory  going  from  $q_1$ to  $q_2$.  It  is  
-\textit{small-space  controllable} if for  any configuration  $q$, 
-for any $\epsilon >0$, there
-exist $\eta >0$ such that all the configurations contained in the ball of center
+\textit{small-space  controllable} if for all configurations  $q$, 
+for all $\epsilon >0$, there
+exists $\eta >0$ such that all the configurations contained in the ball of center
 $q$ and radius $\eta$ are reachable by trajectories included in the
 ball of center $q$ and radius $\epsilon$. Fig.~\ref{fig:ssc1} shows an illustration
 of this property.
@@ -636,11 +636,11 @@ corresponding algorithm.
   Let $\mathcal{C}$ be the configuration space of a small-space controllable robot, and 
   $\mathcal{C}_{free} \subset \mathcal{C}$ the set of collision-free configurations. We
   consider in-contact configurations as colliding, so $\mathcal{C}_{free}$ is an open set.
-  Let $\tau : [0,1] \rightarrow \mathcal{C}_{free}$ be a collision-free path. For every $x \in [0,1]$,
+  Let $\tau : [0,1] \rightarrow \mathcal{C}_{free}$ be a collision-free path. For all $x \in [0,1]$,
   $\tau(x) \in \mathcal{C}_{free}$, so there exists $\epsilon_x$ such that the open ball 
   $B(\tau(x),\epsilon_x)$ of center $\tau(x)$ and radius $\epsilon_x$ is included in 
-  $\mathcal{C}_{free}$. The small-space controllability property states that for every $x$,
-  there exist $\eta_x > 0$ such that every configuration $q \in B(\tau(x),\eta_x)$ is reachable 
+  $\mathcal{C}_{free}$. The small-space controllability property states that for all $x$,
+  there exists $\eta_x > 0$ such that every configuration $q \in B(\tau(x),\eta_x)$ is reachable 
   from $\tau(x)$ by a trajectory included in $B(\tau(x),\epsilon_x)$.
 
   The set of open balls $\left( B(\tau(x),\eta_x) \right)_{x\in [0,1]}$ forms an open cover
@@ -654,7 +654,7 @@ corresponding algorithm.
 
 \subsubsection{Small-Time \textit{versus} Small-Space Controllability}
 In the control theory literature, the property used is usually \textit{small-time controllability}, 
-which states that for  any configuration  $q$, for  any time
+which states that for  all configurations  $q$, for  all times
 $T>0$, the set of configurations accessible from $q$ in time less than
 $T$ forms a  neighborhood of $q$. When accelerations and velocities are bounded,
 small-time controllability implies small-space controllability, which is why 
@@ -676,7 +676,7 @@ two controllability properties.
 \label{sec:humanoid-ssc}
 
 This section  discusses the small-space controllability of walking robots. To clarify
-the presentation, we consider a simplified model of legged robot consisting of two feet
+the presentation, we consider a simplified model of a legged robot consisting of two feet
 of null mass and a punctual mass free to move in three dimensions.
 We do not consider 
 the kinematic chains between the feet and the mass. The robot is walking on a flat terrain,
@@ -692,7 +692,7 @@ The balanced walking conditions for a quasi-static walking robot are that the pu
 mass, or CoM, should always be over the support polygon (the convex hull of the two feet), and 
 one foot can move iff the CoM is over the other foot. Similarly, the walking
 conditions for a dynamic walking robot are that the ZMP should
-always be in the robot support polygon, and on foot can move iff the ZMP is over the other 
+always be in the robot support polygon, and one foot can move iff the ZMP is over the other 
 foot. For a precise description of dynamically balanced walking conditions, the reader can refer
 to \cite{wieber2002}. Under these assumptions, the following result holds:
 
@@ -704,9 +704,9 @@ A quasi-static walking robot is not small-space controllable. A dynamic walking 
 \begin{proof}[Proof of Theorem \ref{thm:humanoid-ssc}]
 
 The first claim is straightforward. Let the robot be in a configuration $q$ where the two
-feet are separated from a positive distance. Let  $L>0$ be the positive horizontal distance
+feet are separated by a positive distance. Let  $L>0$ be the positive horizontal distance
 between the CoM and the left foot (if the CoM is over the left foot, we can consider similarly 
-the right foot). For any $\epsilon < L$, any valid trajectory starting from $q$, included in
+the right foot). For all $\epsilon < L$, any valid trajectory starting from $q$, included in
 the ball of center $q$ and radius $\epsilon$, is such that the CoM is never over the left foot.
 Given the quasi-static walk conditions, the right foot of the robot is fixed along 
 the trajectory. Thus, the set of accessible configurations from $q$ by staying inside 
@@ -719,7 +719,7 @@ Let us now consider a dynamic walking robot. Starting from any valid static conf
 the CoM can move vertically without affecting balance, so there is no need to 
 consider this degree of freedom in the following. If the CoM is not over the edge of the support
 polygon, it is possible to move it in a quasi-static way inside a neighborhood of its current position that projects itself over the support polygon.
-It is thus sufficient and necessary to prove that for any $\epsilon >0$, it is possible to move
+It is thus sufficient and necessary to prove that for all $\epsilon >0$, it is possible to move
 the feet while keeping the CoM inside a neighborhood of size $\epsilon$. Let such $\epsilon >0$
 be arbitrarily fixed.
 
