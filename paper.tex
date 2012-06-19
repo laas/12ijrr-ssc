@@ -462,7 +462,9 @@ $q_{rand}''$\footnote{The algorithm presented here gives a precise idea of the m
   focusing on technical details. Readers interested in the actual implementation can
   refer to \url{https://github.com/laas/hpp-constrained} and 
   \url{https://github.com/laas/hpp-constrained-planner}, where the open-source 
-  code corresponding to this algorithm is made available.}.
+  code corresponding to this algorithm is made available.}. While extending the tree,
+the configurations along the new edge are automatically projected onto $\mathcal{M}$. These projections 
+are not very costly if the edge is not far from the constrained manifold.
 
 \begin{figure}[h]
 \centering
