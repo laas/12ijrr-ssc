@@ -177,7 +177,7 @@ do so, one has to include the obstacles as  constraints to
 satisfy, see for example \cite{kanehiro2008lca}.
 These methods are prone to fall into local minima, global motion 
 planning is needed to overcome this limitation.
-\cite{TouGieGoe2007} Propose a motion generation method where tasks follow
+\cite{TouGieGoe2007} propose a motion generation method where tasks follow
 trajectories define by cubic B-splines. The whole-body motion is optimized
 with respect to the control point positions. This method can take into account
 collision with simple obstacles.
@@ -365,7 +365,7 @@ The way we generate a goal configuration is the following:
 \STATE $\alpha \rightarrow \alpha_{max} - .8*(\alpha_{max} - \alpha)$
 \ENDWHILE
 \IF {$\|f(q)\| \leq \varepsilon$}
-\STATE return success
+\STATE return $q$
 \ELSE
 \STATE return failure
 \ENDIF
@@ -551,8 +551,8 @@ are not very costly if the edge is close to the constrained manifold.
     \left(I -  
     \left(\frac{\partial f}{\partial q}(q_{near})\right)^{+}
     \frac{\partial f}{\partial q}(q_{near})\right) (q_{rand} - q_{near})$
-    \IF {$\text{constraint-solver}(q_{rand}',f,\epsilon) = success$} 
-    \STATE RRT::Extend($\mathcal{T},q_{near},q_{rand}'$)
+    \IF {$\text{constraint-solver}(q_{rand}',f,\epsilon) = q_{rand}''$} 
+    \STATE RRT::Extend($\mathcal{T},q_{near},q_{rand}''$)
     \ENDIF
   \end{algorithmic}
 \end{algorithm}
