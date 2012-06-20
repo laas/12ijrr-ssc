@@ -715,8 +715,8 @@ controllability property.
   \label{fig:ssc2}
 \end{figure}
 
-This result has been long known and used in motion planning, in particular in planning
-for non-holonomic systems. A detailed proof of it can be found in
+This result has been long known and used in motion planning, in particular
+for non-holonomic systems. A detailed proof can be found in
 \cite{taix-94}. We will present a sketch of the proof to give an intuition about the 
 corresponding algorithm.
 
@@ -745,7 +745,7 @@ In the control theory literature, the property used is usually \textit{small-tim
 which states that for  all configurations  $q$, for  all times
 $T>0$, the set of configurations accessible from $q$ in time less than
 $T$ forms a  neighborhood of $q$. When accelerations and velocities are bounded,
-small-time controllability implies small-space controllability, which is why 
+small-time controllability implies small-space controllability. This is why 
 a lot of motion planning previous work only refers to the sufficient small-time controllability
 property. However, the reciprocate is not necessarily true:  a system can be 
 small-space controllable and
@@ -765,7 +765,7 @@ two controllability properties.
 
 This section  discusses walking robot small-space controllability. To clarify
 the presentation, we consider a simplified model of a legged robot consisting of two feet
-of null mass and a punctual mass free to move in three dimensions.
+of zero mass and a point mass free to move in three dimensions.
 We do not consider 
 the kinematic chains between the feet and the mass. The robot is walking on a flat terrain,
 and the feet are assumed to have a positive surface. For our presentation, it is not 
