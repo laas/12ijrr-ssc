@@ -578,13 +578,7 @@ Finally, the goal of the third problem is the rest configuration.
 
 For the two reaching motions, we generate 8 random goal configurations (Section~\ref{sec:goal-sampling}).
 
-The result of RRT is optimized in two steps (see~\cite{dalibard09} for details):
-\begin{enumerate}
-\item the path is extended in order to move the final posture closer to the rest posture,
-\item the path is optimized by random short-cuts.
-\end{enumerate}
-
-Extension 1 presents a video of this motion.
+Extension 1 presents a video of this motion after an optimization step.
 
 \begin{figure}[h]
 \centering
@@ -608,7 +602,7 @@ Extension 1 presents a video of this motion.
 \label{fig:wb-shelves}
 \end{figure}
 
-We have run this set of motion planning problems 20 times. The results are compiled in Table~\ref{table:reaching}. We can notice that optimization dominates the total time of computation. This suggests that improvement can be easily achieved by using numerical optimization techniques. This is on-going work.
+We have run this set of motion planning problems 20 times. The results are compiled in Table~\ref{table:reaching}.
 \begin{table}
 \begin{tabular}{lrrrr}
 & min & max & average & average \\ 
@@ -616,8 +610,6 @@ We have run this set of motion planning problems 20 times. The results are compi
 number of nodes & 43.00 & 481.00 & 102.70 \\
 goal generation time \hspace {1.cm} & 1.00 & 1.56 & 1.22\\
 planning time& 67.36 & 376.84 & 134.28 & 44.76\\
-optimization time & 204.22 & 671.26 & 521.47 & 173.82 \\
-total times & 468.23 & 864.68 & 656.97 &
 \end{tabular}
 \caption {Experimental results on 20 runs: 3 motion planning problems and 2 goal generations. Times are expressed in seconds.}
 \label{table:reaching}
