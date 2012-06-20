@@ -492,7 +492,7 @@ are not very costly if the edge is close to the constrained manifold.
 \node [draw,circle,inner sep=2pt,fill = gray] (qr3) at (345,225) {};
 \node [above = 0.22cm] at (qr3) {$q_{rand}''$} ;
 \draw [dashed,thin] (qr1) -- (qr2) -- (qr3);
-\node [draw,circle,inner sep=2pt,fill = gray] (qnew) at (270,250);
+\node [draw,circle,inner sep=2pt,fill = gray] (qnew) at (270,250) {};
 \node [above = 0.1cm, left = 0.2cm] at (qnew) {$q_{new}$};
 %\draw [thick] (qn) -- (qnew);
 
@@ -565,25 +565,26 @@ are not very costly if the edge is close to the constrained manifold.
 
 \subsection{Example}
 
-An experimental study, presented in  \cite{dalibard09}, showed that
-in complex environments, randomized motion planners were faster than
-collision avoiding local planners. Another benefit of using global motion
-planning compared to local gradient descent is the ability to avoid local 
-minima. 
-
-
 We present in Fig.~\ref{fig:wb-shelves} an illustration of 
 the use of randomized motion planning 
 on complex manipulation problems. The humanoid robot HRP-2 faces shelves. It has to: (i) grasp
 a ball lying on a shelf, (ii) put it on a higher shelf, (iii) come back to a natural
 rest configuration. The statically stable manifold on which the planning takes place is
 defined by tasks constraining the robot feet and CoM. The goal of the first problem
-is defined by a hand configuration task (position and orientation), and a gaze task
-(the robot has to see the ball). The goal of the second problem is defined by a 
-different hand configuration and the same gaze task,
-and finally, the goal of the third problem is the rest configuration.
-Extension 1 presents a video of this motion.
+is defined by a hand configuration task (3 positions and 2 orientations), and a gaze task
+(the robot has to look at the ball). The goal of the second problem is defined by a 
+different hand configuration and the gaze task.
+Finally, the goal of the third problem is the rest configuration.
 
+For the two reaching motions, we generate 8 random goal configurations (Section~\ref{sec:goal-sampling}).
+
+The result of RRT is optimized in two steps (see~\cite{dalibard09} for details):
+\begin{enumerate}
+\item the path is extended in order to move the final posture closer to the rest posture,
+\item the path is optimized by random short-cuts.
+\end{enumerate}
+
+Extension 1 presents a video of this motion.
 
 \begin{figure}[h]
 \centering
@@ -607,18 +608,21 @@ Extension 1 presents a video of this motion.
 \label{fig:wb-shelves}
 \end{figure}
 
+We have run this set of motion planning problems 20 times. The results are compiled in Table~\ref{table:reaching}. We can notice that optimization dominates the total time of computation. This suggests that improvement can be easily achieved by using numerical optimization techniques. This is on-going work.
+\begin{table}
+\begin{tabular}{lrrr}
+& min & max & average \\
+number of nodes & 43.00 & 481.00 & 102.70 \\
+goal generation time (seconds) \hspace {1cm} & 1.00 & 1.56 & 1.22 \\
+planning time (seconds)& 67.36 & 376.84 & 134.28 \\
+optimization time (seconds) & 204.22 & 671.26 & 521.47 \\
+total times (seconds) & 468.23 & 864.68 & 656.97
+\end{tabular}
+\caption {Experimental results on 20 runs: 3 motion planning problems and 2 goal generations.}
+\label{table:reaching}
+\end{table}
 
-
-The motion presented in Fig.~\ref{fig:wb-shelves} looks very complicated.
-The reasons are that the environment is complex and HRP-2 kinematic tree is highly constrained.
-The motion has been optimized based on these constraints. Note that the
-accessibility space of this robot is not wide enough to accomplish this task further 
-away from the shelves, which could have eased the motion. One possibility to extend the
-robot accessibility space is to automatically change the support polygon durint the motion to solve the task.
-This is an ongoing research field, \cite{OussamaKanoun06102010} proposes some 
-local solutions. This has not been integrated in our global planning algorithm yet.
-
-
+Among all calls to \texttt{constraint-solver}, the average number of iterations is 6.5 and the success rate is above 95 percent.
 
 \section{From Statically Stable Paths to Dynamic Walk Trajectories}
 \label{sec:wb-step}
