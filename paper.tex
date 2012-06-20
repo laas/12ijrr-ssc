@@ -45,7 +45,7 @@
 
 \begin{document}
 
-\title{Locomotion and Whole-Body Motion Planning for Humanoid Robots: an Integrated Approach}
+\title{Dynamic Walking and Whole-Body Motion Planning for Humanoid Robots: an Integrated Approach}
 
 \author{
   S\'ebastien Dalibard\and
@@ -73,11 +73,12 @@
 This paper presents a general method for planning collision-free whole-body walking motions
 for humanoid robots. First, we present a randomized algorithm for constrained motion
 planning, that is used to generate collision-free statically stable paths solving
-manipulation tasks. Then, we prove that these paths can always be approximated by collision-free
-dynamically balanced trajectories. The proof is based on humanoid robot
-\textit{small-space controllability} and leads to a sound algorithm presented
-in the paper. We have  applied and evaluated our method
-on several  problems where whole-body planning and  walk are needed,
+manipulation tasks. Then, we show that dynamic walking makes humanoid robots 
+small-space controllable. Such a property allows to easily transform 
+collision-free statically stable paths into 
+collision-free dynamically balanced trajectories. It leads to a sound 
+algorithm which has been applied and evaluated on several
+problems where whole-body planning and  walk are needed,
 and the results have been validated  on a real HRP-2 robot.
 
 \end{abstract}
@@ -762,7 +763,7 @@ two controllability properties.
 
 
 
-\subsection{Walking Robot Controllability}
+\subsection{Dynamic Walking Makes Humanoid Robots Small-Space Controllable}
 \label{sec:humanoid-ssc}
 
 This section  discusses walking robot small-space controllability. To clarify
