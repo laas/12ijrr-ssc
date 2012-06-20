@@ -1,0 +1,639 @@
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.408280
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:56.440868
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:00:27.869651
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.625410
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:01:07.326294
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:00:22.501453
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:04:13.082052
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:33.852186
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.457430
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:01:22.348759
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:05:35.601380
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.909745
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:01:49.563236
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:03:04.778586
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:00.143078
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:30.880176
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.764578
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:27.245224
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:51.958275
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.543119
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:01:50.760138
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:03:42.362719
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:00.185480
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:03:01.514747
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.690041
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:50.637403
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:04:42.116113
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.633395
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:38.751763
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:21.259741
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:00.200276
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:03:36.516392
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.705043
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:51.873147
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:05:05.632355
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.756328
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:15.367628
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:50.937891
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:00.123872
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:58.562645
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.518919
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:01:43.816693
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:04:03.358049
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.586358
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:01:09.726208
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:03:29.531269
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:00.243381
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:31.394482
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.510583
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:21.507297
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:03:43.124206
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.646235
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:01:43.893763
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:21.246389
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:00.171526
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:33.627431
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.608999
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:48.594139
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:04:14.466700
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.651356
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:02:44.454458
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:39.611645
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:00.210858
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:46.882190
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.406044
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:30.513408
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:03:23.203119
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.779748
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:59.299201
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:24.804582
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:00.124532
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:59.835323
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.423104
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:01:42.870945
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:28.934298
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.776338
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:23.243527
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:28.933720
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:00.241025
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:03:23.586184
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.573444
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:46.894148
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:03:56.314070
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.433669
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:31.310274
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:01:51.412510
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:00.183560
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:03:01.269950
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.545183
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:01:16.814680
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:21.066501
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.533093
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:35.763077
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:03:29.288346
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:00.170932
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:01:55.567519
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.669416
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:23.103850
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:03:20.789987
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.886104
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:01:12.314316
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:01:50.063087
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:00.103661
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:03:13.667885
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.505983
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:25.836128
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:39.831079
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.630217
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:01:57.751134
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:03.668834
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:00.087077
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:52.831578
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.516921
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:28.342477
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:20.356739
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.808038
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:38.950658
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:18.188931
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:00.137328
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:00.930513
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.580715
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:51.825255
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:38.751595
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.416355
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:02:46.463073
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:43.814913
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:00.348773
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:03:03.507986
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.598229
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:11.949266
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:03.136951
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.695661
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:01:04.843470
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:04:23.933807
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:00.181195
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:31.773870
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.512619
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:31.123202
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:03:56.495526
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.732211
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:52.552171
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:01:44.583413
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:00.163817
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:03:28.744306
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.557775
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:01:06.359649
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:03:23.838053
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.716141
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:15.486315
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:24.863888
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:00.131572
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:03:05.992558
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.411744
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:01:02.122036
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:44.301390
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: exiting ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: entering ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:339: generateGoalConfig: start
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:379: generateGoalConfig: stop
+BENCHMARK:/home/florent/devel/hpp/src/hpp-constrained-planner/src/planner.cc:380: generateGoalConfig: 00:00:00.706082
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: exiting ktStatus hpp::constrained::Planner::generateGoalConfigurations(unsigned int, unsigned int)
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: entering ktStatus hpp::core::Problem::solve()
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:01:11.170818
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:25.585075
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:454: planPath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:459: planPath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:460: planPath: 00:00:00.177118
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:474: optimizePath: start
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:502: optimizePath: stop
+BENCHMARK:/home/florent/devel/hpp/stable/build/path/hpp-core/work.florent-laptop/hpp-core-2.5/src/problem.cc:503: optimizePath: 00:02:35.887027
