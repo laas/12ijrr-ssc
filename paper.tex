@@ -353,7 +353,7 @@ The way we generate a goal configuration is the following:
 \end{enumerate}
 
 \begin{algorithm}
-\caption{constraint-solver($q$, f, $\varepsilon$): find $q$ such that $f(q) = 0$}
+\caption{\texttt{constraint-solver}($q$, f, $\varepsilon$): find $q$ such that $f(q) = 0$}
 \label{algo:newton}
 \begin{algorithmic}
 \STATE $\alpha=.1$, $i=0$, $\alpha_{max} = .95$
@@ -455,7 +455,7 @@ the adaptation of the classic extend function, and Fig.~\ref{fig:gikrrt} illustr
 extension. The idea is to first project $q_{rand}$ on the tangent
 space to $\mathcal{M}$  at $q_{near}$. Let us call the projected configuration $q_{rand}'$.
 $q_{rand}'$ is obtained by one step of prioritized inverse kinematics optimization. Let 
-$q_{rand}''$  be the result of a call to $\text{constraint-solver}(q_{rand}',f,\epsilon)$.  It is 
+$q_{rand}''$  be the result of a call to $\texttt{constraint-solver}(q_{rand}',f,\epsilon)$.  It is 
 the projection
 of $q_{rand}'$ on $\mathcal{M}$. Instead of extending the tree from $q_{near}$ towards 
 $q_{rand}$, the algorithm tries to extend from $q_{near}$ towards 
@@ -551,7 +551,7 @@ are not very costly if the edge is close to the constrained manifold.
     \left(I -  
     \left(\frac{\partial f}{\partial q}(q_{near})\right)^{+}
     \frac{\partial f}{\partial q}(q_{near})\right) (q_{rand} - q_{near})$
-    \IF {$\text{constraint-solver}(q_{rand}',f,\epsilon) = q_{rand}''$} 
+    \IF {$\texttt{constraint-solver}(q_{rand}',f,\epsilon) = q_{rand}''$} 
     \STATE RRT::Extend($\mathcal{T},q_{near},q_{rand}''$)
     \ENDIF
   \end{algorithmic}
