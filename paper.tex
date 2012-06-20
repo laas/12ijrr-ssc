@@ -118,7 +118,7 @@ it can be necessary to consider exact 3D models of a humanoid robot and its envi
 \label{fig:couv}
 \end{figure}
 
-There are two ways to use motion planners to generate dynamically balanced robotic motions.
+There are two main ways of using motion planners to generate dynamically balanced robotic motions.
 The more general one is to plan in a robot dynamic space. By taking into account both robot
 configuration and velocity, motions that satisfy dynamic balance constraints can be generated
 at a planning phase. When planning motion for humanoid robots, this is a particularly costly
@@ -458,13 +458,13 @@ $q_{rand}''$  be the result of a call to $\text{constraint-solver}(q_{rand}',f,\
 the projection
 of $q_{rand}'$ on $\mathcal{M}$. Instead of extending the tree from $q_{near}$ towards 
 $q_{rand}$, the algorithm tries to extend from $q_{near}$ towards 
-$q_{rand}''$\footnote{The algorithm presented here gives a precise idea of the method, without 
+$q_{rand}''$\footnote{This presentation attempts to give a precise idea of the algorithm, without 
   focusing on technical details. Readers interested in the actual implementation can
   refer to \url{https://github.com/laas/hpp-constrained} and 
-  \url{https://github.com/laas/hpp-constrained-planner}, where the open-source 
-  code corresponding to this algorithm is made available.}. While extending the tree,
+  \url{https://github.com/laas/hpp-constrained-planner}, where the corresponding open-source 
+  code is available.}. While extending the tree,
 the configurations along the new edge are automatically projected onto $\mathcal{M}$. These projections 
-are not very costly if the edge is not far from the constrained manifold.
+are not very costly if the edge is close to the constrained manifold.
 
 \begin{figure}[h]
 \centering
@@ -1194,7 +1194,8 @@ is only a few centimeters away from the lamp.
 Fig.~\ref{fig:shelf} shows the resulting walk motion and Fig.~\ref{fig:shelf-waist} 
 shows the robot CoM trajectory during locomotion. Extension 3 presents a 
 comprehensive video of this problem, including the motion execution on
-the real robot HRP-2.
+the real robot HRP-2 on stage. Fig.~\ref{fig:shelf-cdf} shows some snapshots 
+taken from Extension 3.
 
 
 \begin{figure}[h]
@@ -1222,7 +1223,7 @@ the real robot HRP-2.
 \begin{figure}[h]
 \centering
 
-\includegraphics[width=0.5\linewidth]{pics/shelves/waist-trajectory.png}
+\includegraphics[width=0.4\linewidth]{pics/shelves/waist-trajectory.png}
 
 
 \caption{Horizontal trajectory of the robot CoM during
@@ -1230,6 +1231,20 @@ the real robot HRP-2.
 \label{fig:shelf-waist}
 \end{figure}
 
+\begin{figure}[h]
+\centering
+
+\includegraphics[width=0.19\linewidth]{pics/shelves-cdf/1.jpg}
+\includegraphics[width=0.19\linewidth]{pics/shelves-cdf/2.jpg}
+\includegraphics[width=0.19\linewidth]{pics/shelves-cdf/3.jpg}
+\includegraphics[width=0.19\linewidth]{pics/shelves-cdf/4.jpg}
+\includegraphics[width=0.19\linewidth]{pics/shelves-cdf/5.jpg}
+
+\caption{Execution of the walking trajectory by HRP-2 on stage. The robot first goes
+  to the shelves to release the ball, then comes back to a rest position.}
+
+\label{fig:shelf-cdf}
+\end{figure}
 
 
 \section{Limits and Discussions}
