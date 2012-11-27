@@ -59,7 +59,7 @@
     UT1, UTM, LAAS ; F-31077 Toulouse
     Cedex 4, France. S\'ebastien Dalibard is now with Nanyang Technological University, Singapore.}
   \footnote{
-    This paper summarizes and and extends previous work that appeared in the 9th and 11th
+    This paper summarizes and extends previous work that appeared in the 9th and 11th
     IEEE-RAS International Conference on Humanoid Robots, 2009 and 2011.
   }
 }
@@ -75,7 +75,7 @@ for humanoid robots. First, we present a randomized algorithm for constrained mo
 planning, that is used to generate collision-free statically stable paths solving
 manipulation tasks. Then, we show that dynamic walking makes humanoid robots 
 small-space controllable. Such a property allows to easily transform 
-collision-free statically stable paths into 
+collision-free statically balanced paths into 
 collision-free dynamically balanced trajectories. It leads to a sound 
 algorithm which has been applied and evaluated on several
 problems where whole-body planning and  walk are needed,
@@ -157,7 +157,7 @@ method.
 
 This work is based on several fields of humanoid robotics
 research: prioritized inverse kinematics, randomized  whole-body  motion
-planning and walk pattern generators based on the Zero-Momentum
+planning and walk pattern generators based on the Zero-Moment
 Point (ZMP) formalism. This section summarizes the literature related to each of 
 these fields.
 
@@ -197,12 +197,12 @@ years,  \textit{Probabilistic Roadmaps} \cite{kavraki1996prp} and
 high-dimensional   planning  problems, see \cite{Lav06} and \cite{choset2005prm} for comprehensive
 overviews.
 When  using  sampling  techniques  on  a humanoid  robot,  another difficulty
-is to  take into  account stability  constraints,  i.e. to
+is to  take into  account balance  constraints,  i.e. to
 generate  random  configurations   on  zero  volume  submanifolds  of
 $\mathcal{C}$. This problem has been investigated with success during
-the last few years, \cite{Berenson15032011} presents a exhaustive survey
+the last few years, \cite{Berenson15032011} presents an exhaustive survey
 of Jacobian-based methods. Other recent contributions \cite{porta2012randomized}
-present sophisticated constrained planning techniques based on higher-dimensional
+present sophisticated constrained motion planning techniques based on higher-dimensional
 continuation. Section \ref{sec:wb} presents a simple adaptation
 of the RRT algorithm to constrained motion planning, that was first
 introduced in \cite{dalibard09}.
@@ -210,22 +210,22 @@ introduced in \cite{dalibard09}.
 \subsection{Walk Pattern Generation}
 
 Another  field of  humanoid  robotics research  is  the generation  of
-dynamically stable  walk patterns. Since  the introduction of  the ZMP
+dynamically balanced walk patterns. Since  the introduction of  the ZMP
 formalism  \cite{vukobratovic1969contribution},  several  methods  have  been  proposed  to
 generate  walking  motions efficiently.   One  way  to  deal with  the
-complexity  of a  humanoid  robotics  kinematic tree  is  to use  the
+complexity  of a  humanoid  robot  kinematic tree  is  to use  the
 so-called "cart-table" simplified model \cite{kajita2003biped}. Based on this
 model,  planning a trajectory  for the  ZMP is  reduced to  planning a
 trajectory  for  the Center  of  Mass (CoM)  of  the  robot.  Given  a
-trajectory  of  the CoM  and  footstep  positions, inverse  kinematics
-solvers can animate  the whole set of degrees of freedom (DoFs) of the
+trajectory  of  the CoM  and  footprint  positions, inverse  kinematics
+solvers can animate  the whole set of DoFs of the
 robot to generate a dynamically stable walk trajectory.
 
 
 \subsection{Collision-Free Walk Planning}
 
 Collision-free  locomotion   trajectories  are  usually   obtained  by
-simplifying the model of the  robot or of the environment. By reducing 
+simplifying the model of either the  robot or the environment. By reducing 
 a  humanoid robot to a bounding volume that wraps the swaying motion,
 one can  use a simple  planar motion planner  on this bounding  volume and
 generate  a valid  locomotion  trajectory. This  strategy  is used  in
@@ -245,8 +245,8 @@ by using  an RRT algorithm.
 
 Some planning methods for free-climbing robots \cite{bretl2006motion}
 can be seen as a general way 
-to consider quasi-static multi-step planning. They are not directly applicable to
-humanoid dynamically stable locomotion.
+to consider quasi-static multi-step planning. They are not however directly applicable to
+humanoid dynamically balanced locomotion.
 Other recent contributions to the field of locomotion planning  include algorithms 
 considering the dynamics at the planning phase \cite{shkolnik2011bounding}. This leads to 
 a growth of algorithmic complexity, particularly costly for high-dimensional
@@ -254,7 +254,7 @@ systems such as humanoid robots. To the authors knowledge such techniques have n
 used on humanoid robotic platforms so far.
 In our work, we show that it is not always
 necessary to take into account dynamics while planning, even though the final
-output of our algorithm is a dynamically stable walk motion. This result was first
+output of our algorithm is a dynamically balanced walk motion. This result was first
 presented in \cite{dalibard2011small}.
 
 
@@ -266,14 +266,16 @@ that computes collision-free walking trajectories, based on
 exact models of both robot and environment. It is used to solve manipulation tasks
 that may require walking. The first stage of our algorithm uses a
 constrained sampling-based motion 
-planner and  computes a collision-free  statically stable path  for a robot fixed or sliding 
+planner and  computes a collision-free  statically balanced path  for a robot which can be fixed or sliding 
 on the ground. Another  contribution of this  paper is the formal  proof that
 this first path can always be  approximated by a dynamically balanced, collision-free
 walking  trajectory. We have implemented this well-grounded 
-method.  The results have been validated on a real HRP-2 robot.
+method, and the results have been validated on the HRP-2 robot.
 
-\section{Randomized Motion Planning on Constrained Manifolds}
+\section{Randomized Motion Planning on Constraint Manifolds}
 \label{sec:wb}
+
+FIXME: Avoid the mixup due to the use of task and constraints?
 
 This section presents an algorithm for constrained motion planning. 
 The problem solved here
@@ -281,17 +283,17 @@ differs from classic approaches in two ways:
 \begin{enumerate}
 \item the set of valid configurations is defined implicitly, as the ones satisfying a given 
   set of inverse kinematics and balance tasks;
-\item the goal is also defined implicitly, by additional inverse kinematic tasks.
+\item the goal is also defined implicitly, by additional inverse kinematics tasks.
 \end{enumerate}
 During global planning, we will consider several types of
 tasks and constraints for various reasons:
 \begin{itemize}
-\item Static stability: the center of mass of the robot stays above
+\item Static balance: the CoM of the robot stays above
   the support polygon center, the two feet have fixed position and
   orientation.
 \item End-effector position and orientation: the goals of some problems presented
-  in the experimental section of this paper are defined as robot hand configuration,
-  or gaze direction.
+  in the experimental section of this paper are defined as a specific robot hand pose,
+  or a gaze direction.
 \item Configuration task: our adaptation of randomized motion planning algorithms 
   uses tasks defined as the distance towards a given configuration in $\mathcal{C}$. 
   This will be detailed in the following section.
@@ -309,7 +311,7 @@ The classic RRT algorithm, as presented in  \cite{kuffner00rrtconnect}, grows
 a random tree inside the robot 
 collision-free configuration space 
 $\mathcal{C}_{free}$. Each iteration of the algorithm attempts to extend the tree
-by adding new vertices in the direction of a randomly-selected configuration
+by adding new vertices in the direction of a randomly selected configuration
 $q_{rand}$. Algorithm~\ref{algRRT} shows the pseudo-code of the RRT algorithm.
 It takes as input an initial configuration $q_0$ and grows a tree  $\mathcal{T}$ rooted 
 in $q_0$. 
@@ -339,7 +341,7 @@ trees from the initial configuration and the random goal configurations. The ide
 generating several goals for manipulation planning was proposed in \cite{diankov2008bpc}.
 
 Section~\ref{sec:goal-sampling}  describes the goal manifold sampling, and 
-Section~\ref{sec:extension} the adaptation or RRTs random extensions to constrained planning.
+Section~\ref{sec:extension} the adaptation or RRT random extensions to constrained motion planning.
 
 \subsection{Goal Manifold Sampling}
 \label{sec:goal-sampling}
@@ -348,7 +350,7 @@ The way we generate a goal configuration is the following:
 \begin{enumerate}
 \item Shoot a random configuration in $\mathcal{C}$ with uniform distribution.
 \item Call the \textit{constraint solver} (Algorithm~\ref{algo:newton}) on this configuration, with the static
-  stability constraints and the goal task.
+  balance constraints and the goal task.
 \item If success, check for collisions.
 \end{enumerate}
 
@@ -372,7 +374,7 @@ The way we generate a goal configuration is the following:
 \end{algorithmic}
 \end{algorithm}
 
-Fig.~\ref{fig:goal} shows different random configurations respecting stability 
+Fig.~\ref{fig:goal} shows different random configurations enforcing banlance 
 constraints and solving a reaching task for an animated character. 
 
 \begin{figure}[h]
@@ -384,7 +386,7 @@ constraints and solving a reaching task for an animated character.
 }
 
 \caption{Random goal configurations solving a reaching task. All the
-  configurations are stable and collision-free, and the right hand of the character
+  configurations are balanced and collision-free, and the right hand of the character
   reaches the orange ball. Note that the ball is also an obstacle.}
 \label{fig:goal}
 \end{figure}
@@ -569,8 +571,12 @@ We present in Fig.~\ref{fig:wb-shelves} an illustration of
 the use of randomized motion planning 
 on complex manipulation problems. The humanoid robot HRP-2 faces shelves. It has to: (i) grasp
 a ball lying on a shelf, (ii) put it on a higher shelf, (iii) come back to a natural
-rest configuration. The statically stable manifold on which the planning takes place is
+rest configuration. The statical balance manifold on which the planning takes place is
 defined by tasks constraining the robot feet and CoM. The goal of the first problem
+
+FIXME: what follows is not clear, rephrase to say that the hand
+position is fixed and that it can rotate along the vertial axis.
+
 is defined by a hand configuration task (3 positions and 2 orientations), and a gaze task
 (the robot has to look at the ball). The goal of the second problem is defined by a 
 different hand configuration and the gaze task.
@@ -596,9 +602,9 @@ Extension 1 presents a video of this motion after an optimization step.
 
 
 \caption{HRP-2 grabs a ball on a shelf, puts it on another shelf, and comes back to 
-  a rest position. Static stability constraints are respected along the path, and 
+  a rest position. Static balance constraints are enforced along the path, and 
   the intermediary goals consisting in grasping and displacing the ball are defined
-  implicitly as inverse kinematic tasks.}
+  implicitly as inverse kinematics tasks.}
 \label{fig:wb-shelves}
 \end{figure}
 
@@ -611,7 +617,7 @@ number of nodes & 43.00 & 481.00 & 102.70 \\
 goal generation time \hspace {1.cm} & 1.00 & 1.56 & 1.22\\
 planning time& 67.36 & 376.84 & 134.28 & 44.76\\
 \end{tabular}
-\caption {Experimental results on 20 runs: 3 motion planning problems and 2 goal generations. Times are expressed in seconds.}
+\caption {Experimental results on 20 runs: 3 motion planning problems and 2 goal generations. Time is expressed in seconds.}
 \label{table:reaching}
 \end{table}
 
@@ -621,11 +627,11 @@ Among all calls to \texttt{constraint-solver}, the average number of iterations 
 \label{sec:wb-step}
 
 The previous section has presented a simple algorithm that solves manipulation planning
-problems on a given constrained manifold of $\mathcal{C}$. 
+problems on a given constraint manifold of $\mathcal{C}$. 
 
 If we use this algorithm with static 
-stability constraints without fixing globally the robot foot positions, it generates 
-statically stable paths for a robot sliding on the ground. Fig~\ref{fig:sliding} shows
+balance constraints without fixing globally the robot foot positions, it generates 
+statically balanced paths for a robot sliding on the ground. Fig~\ref{fig:sliding} shows
 an example of a whole-body collision-free path for a robot passing between two chairs.
 Such paths are physically unfeasible. They are, however, easier to generate than feasible
 dynamic trajectories because only geometric constraints are considered at planning time.
@@ -639,26 +645,26 @@ dynamic trajectories because only geometric constraints are considered at planni
   \includegraphics[width=0.24\linewidth]{pics/chairs/sliding-perspective-4.png}
 
 
-  \caption{Collision-free  statically stable path  for a  humanoid  robot  sliding on  the
+  \caption{Collision-free  statically balanced path  for a  humanoid  robot  sliding on  the
     ground.}
   \label{fig:sliding}
 \end{figure}
 
 
 
-This section presents a \textit{constructive} proof that any such statically stable, 
+This section presents a \textit{constructive} proof that any such statically balanced, 
 collision-free path for a legged robot sliding
-on the ground can be approximated by a collision-free dynamic walk trajectory.
+on the ground can be approximated by a  dynamically balanced, collision-free walk trajectory.
 The proof is based on ideas from control theory, in particular small-space 
-controllability. It also uses the fact that balance criteria for dynamic walk are different
-from the ones for static stability. An important point is that our result and method do not hold
+controllability. It also uses the fact that balance criteria for dynamic walking are different
+from the ones for static balance. An important point is that our result and method do not hold
 for a biped robot that walks in a quasi-static way. 
 
 Section~\ref{sec:ssc} recalls the definition of small-space controllability and its
-use in motion planning. Section~\ref{sec:humanoid-ssc} proves that a legged robot
-dynamically walking is small-space controllable, while a legged robot quasi-statically
-walking is not. Section~\ref{sec:ssc-application} shows how this property is used to
-approximate collision-free statically stable paths by dynamic walk trajectories.
+use in motion planning. Section~\ref{sec:humanoid-ssc} proves that a
+dynamically walking legged robot is small-space controllable, while a quasi-statically
+walking legged robot is not. Section~\ref{sec:ssc-application} shows how this property is used to
+approximate collision-free statically balanced paths by dynamic walking trajectories.
 
 
 \subsection{Small-Space Controllability}
@@ -679,16 +685,16 @@ of this property.
   \input{stc1.tex}
 
   \caption{The small-space controllability local property:  any configuration $q'$ 
-    at distance less than
+    at a distance less than
     $\eta$ is reachable from $q$ by an admissible trajectory included in
     a ball of size $\epsilon$.}
   \label{fig:ssc1}
 \end{figure}
 
-The main  consequence of  that property  
+The main  consequence of  this property  
 in  motion planning  is the following theorem, that shows how planning for
 dynamic systems is reduced to geometric planning
-thanks to small-space controllability:
+thanks to the small-space controllability property:
 
 \begin{theorem}
   \label{thm:ssc}
@@ -698,8 +704,8 @@ thanks to small-space controllability:
 \end{theorem}
 
 Fig. \ref{fig:ssc2} shows an example of collision-free 
-path approximation by admissible collision-free sub-trajectories. The fact 
-that this algorithm  converges is guaranteed by the small-space
+path approximation by admissible collision-free sub-trajectories. The convergence 
+of this algorithm is guaranteed by the small-space
 controllability property.
 
 \begin{figure}[h]
@@ -724,8 +730,8 @@ corresponding algorithm.
   Let $\mathcal{C}$ be the configuration space of a small-space controllable robot, and 
   $\mathcal{C}_{free} \subset \mathcal{C}$ the set of collision-free configurations. We
   consider in-contact configurations as colliding, so $\mathcal{C}_{free}$ is an open set.
-  Let $\tau : [0,1] \rightarrow \mathcal{C}_{free}$ be a collision-free path. For all $x \in [0,1]$,
-  $\tau(x) \in \mathcal{C}_{free}$, so there exists $\epsilon_x$ such that the open ball 
+  Let $\tau : [0,1] \rightarrow \mathcal{C}_{free}$ be a collision-free path. Thus for all $x \in [0,1]$,
+  $\tau(x) \in \mathcal{C}_{free}$, there exists $\epsilon_x$ such that the open ball 
   $B(\tau(x),\epsilon_x)$ of center $\tau(x)$ and radius $\epsilon_x$ is included in 
   $\mathcal{C}_{free}$. The small-space controllability property states that for all $x$,
   there exists $\eta_x > 0$ such that every configuration $q \in B(\tau(x),\eta_x)$ is reachable 
@@ -763,13 +769,13 @@ two controllability properties.
 \subsection{Dynamic Walking Makes Humanoid Robots Small-Space Controllable}
 \label{sec:humanoid-ssc}
 
-This section  discusses walking robot small-space controllability. To clarify
+This section  discusses a walking robot small-space controllability. To clarify
 the presentation, we consider a simplified model of a legged robot consisting of two feet
 of zero mass and a point mass free to move in three dimensions.
 We do not consider 
 the kinematic chains between the feet and the mass. The robot is walking on a flat terrain,
 and the feet are assumed to have a positive surface. For our presentation, it is not 
-necessary to consider the feet height, so the configuration space of the robot is:
+necessary to consider the foot height, so the configuration space of the robot is:
 \[
 \mathcal{C} = SE(2) \times SE(2) \times \mathbb{R}^3
 \]
@@ -786,7 +792,7 @@ to \cite{wieber2002}. Under these assumptions, the following result holds:
 
 \begin{theorem}
 \label{thm:humanoid-ssc}
-A quasi-static walking robot is not small-space controllable. A dynamic walking robot is.
+A quasi-statically walking robot is not small-space controllable. A dynamically walking robot is.
 \end{theorem}
 
 \begin{proof}[Proof of Theorem \ref{thm:humanoid-ssc}]
@@ -796,14 +802,14 @@ feet are separated by a positive distance. Let  $L>0$ be the positive horizontal
 between the CoM and the left foot (if the CoM is over the left foot, we can consider similarly 
 the right foot). For all $\epsilon < L$, any valid trajectory starting from $q$, included in
 the ball of center $q$ and radius $\epsilon$, is such that the CoM is never over the left foot.
-Given the quasi-static walk conditions, the right foot of the robot is fixed along 
+Given the quasi-static walking conditions, the right foot of the robot is fixed along 
 the trajectory. Thus, the set of accessible configurations from $q$ by staying inside 
 $B(q,\epsilon)$ does not form a neighborhood of $q$, since it does not include any configuration
 where the right foot has moved. This shows that the robot is not small-space controllable.
 
 \bigskip
 
-Let us now consider a dynamic walking robot. Starting from any valid static configuration, 
+Let us now consider a dynamically walking robot. Starting from any valid static configuration, 
 the CoM can move vertically without affecting balance, so there is no need to 
 consider this degree of freedom in the following. If the CoM is not over the edge of the support
 polygon, it is possible to move it in a quasi-static way inside a neighborhood of its current position that projects itself over the support polygon.
@@ -840,7 +846,7 @@ is $L$. To achieve dynamically balanced walking, we aim at making
 $p_y(t)$ oscillate  between $-L$ and $L$. To move the ZMP  under a
 given foot, only  the $y$ coordinate of the CoM  is of interest. Thus,
 we will keep the $x$ coordinates  of the CoM and ZMP constant equal to
-$0$. By hypothesis, the feet are of positive surface,
+$0$. By hypothesis, the feet have a positive surface,
 let $l>0$ be such that the length of the section of a foot along the 
 $y$-axis is greater than $l$. Fig.~\ref{fig:simple-humanoid} summarizes the notations used
 in the following.
@@ -886,8 +892,8 @@ overcome this  discontinuity, we go through a  transient state between
 $(t=0)$ and  $(t=T)$ for some  $T >0$. Let  $f:[0,T] \rightarrow
 [0,1]$  be an  increasing function of class $C^\infty$  such  that  $f(0)  =  0$,
 $\dot{f}(0) = 0$, $f(T) =  1$, $\dot{f}(T) = 0$ and $\ddot{f}(T)
-=  0$.  We can explicitly  construct  such  an $f$   with  a degree  4
-spline.   We   also   request   that   for  all   $t   \in   [0,T]$,
+=  0$.  We can explicitly  construct  such  an $f$   with  a
+spline of degree  4.   We   also   request   that   for  all   $t   \in   [0,T]$,
 $|2\epsilon\dot{f}(t)\frac{\omega}{\omega_0^2}|   \leq  \frac{l}{4}$
 and   $|\epsilon\ddot{f}(t)/\omega_0^2|  \leq   \frac{l}{4}$.  These
 inequalities  will be  used  to bound  the  trajectory of  the  ZMP. We  can
@@ -941,7 +947,7 @@ $L$. The bounds on the derivatives of $f$ guarantee that $p_y(t)$ lies
 between  $-L- l/2$ and  $L+ l/2$,  which means  that the  ZMP stays
 inside  the  support  polygon.  Fig.  \ref{fig:zmp-inplace}  shows  an
 example  of CoM  motion  on the  $y$  axis and  the corresponding  ZMP
-motion. Once in permanent walk in-place state, the robot can come back
+motion. Once in permanent in-place walking state, the robot can come back
 to  a static  state by  applying a  symmetric transient  state  used to
 decrease  gradually  the amplitude  of  the  oscillations  of the  CoM
 without  generating a  discontinuity in  the first  derivative  of the
@@ -957,10 +963,10 @@ the proof.
 \subsubsection{Remarks}
 \paragraph{Generalization to a complete model:} More work is needed to generalize 
 the previous proof to any legged robot model. First, because we use a model with
-a point mass, we did not have to consider the angular-momentum of the robot
+a point mass, we did not have to consider the angular momentum of the robot
 around the CoM, while it accounts for dynamic balance. Moreover, when considering
 an actual kinematic and dynamic model,
-the positions of feet and CoM are not controlled degrees of freedom, but inputs 
+the positions of feet and CoM are not controlled DoFs, but inputs 
 for inverse kinematic tasks. Continuity and regularity results about the robot
 controller -- i.e. how much the configuration changes when the input of an inverse
 kinematics task changes--, would be needed to generalize the proof. We have not
@@ -990,7 +996,7 @@ and collision-free trajectories. However, the theorem depends on a control law
 that generates trajectories with unbounded velocities for the CoM, when the input
 path is close to obstacles. The humanoid robot
 hardware may be a limitation to such trajectories. To prevent the generated CoM 
-oscillations from being too fast, one has to require that the statically stable 
+oscillations from being too fast, one has to require that the statically balanced 
 path is included
 inside an $\epsilon$-radius tube of the free space, where $\epsilon$ depends on the
 physical capacities of the robot.
@@ -1006,8 +1012,8 @@ The  algorithm   that  animates  a  statically  stable   path  into  a
 dynamically stable  walk trajectory has been inspired  by the previous
 small-space controllability  proof.
 Given a statically  stable path $p$ respecting the cart-table model approximation constraints,
-we  start  by placing  footsteps  corresponding  to  the nominal  walk
-pattern  of the  robot. Given the footsteps, we  compute a ZMP trajectory, 
+we  start  by placing  footprints  corresponding  to  the nominal  walk
+pattern  of the  robot. Given the footprints, we  compute a ZMP trajectory, 
 and a preview controller outputs  a corresponding CoM trajectory. 
 The stack of tasks applied to
 the robot to generate a dynamic walk motion is -- in decreasing priority order:
@@ -1181,7 +1187,7 @@ In the problem shown in Fig. \ref{fig:shelf} the robot has to put a ball on a
 shelf, in a constrained apartment environment. The final configuration is defined 
 implicitly as a desired hand position. We have generated automatically goal configurations 
 solving the task, as described in Section~\ref{sec:wb} . Then, we have
-applied our planner to generate a whole-body walk motion that solves the hand reaching
+applied our planner to generate a whole-body walking motion that solves the hand reaching
 task. 
 
 The solution sliding path is constrained between the table on the right and the lamp
