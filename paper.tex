@@ -134,7 +134,7 @@ robot and its environment. It is used to solve navigation and manipulation probl
 generates collision-free, statically stable 
 geometric paths. We also present a constructive formal proof that these paths can be approximated by
 collision-free, dynamically balanced walk trajectories. Our planner is designed for indoor
-environments, where the floor is horizontal and flat. Because we do not compute explicitely footstep
+environments, where the floor is horizontal and flat. Because we do not compute explicitly footstep
 positions at the planning stage, the presented planner is unable to plan motions in which the
 robot steps over obstacles. This limitation is discussed in the paper.
 
@@ -164,23 +164,23 @@ these fields.
 \subsection{Prioritized Inverse Kinematics}
 
 The problem of inverse kinematics for a humanoid robot, or any articulated
-structure, is to compute a joint motion to achieve an end-effector pose. As the
+structure, is to compute a joint position to achieve an end-effector pose. As the
 robots we deal with are redundant, it is natural to take advantage of
 this redundancy by specifying multiple tasks, potentially with
 different priorities. This problem has been widely studied in robotics
-planning and control literature, and many jacobian-based solutions have been
+planning and control literature, and many Jacobian-based solutions have been
 proposed, among which 
 \cite{nakamura1986iks}, \cite{siciliano1991gfm},
 \cite{baerlocher1998tpf} and \cite{khatib2004wbd}.
 Obstacle avoidance can be taken into account with similar methods. To
 do so, one has to include the obstacles as  constraints to
 satisfy, see for example \cite{kanehiro2008lca}.
-These methods are prone to fall into local minima, global motion 
+These methods are prone to fall into local minima, thus global motion
 planning is needed to overcome this limitation.
 \cite{TouGieGoe2007} propose a motion generation method where tasks follow
-trajectories define by cubic B-splines. The whole-body motion is optimized
+trajectories defined by cubic B-splines. The whole-body motion is optimized
 with respect to the control point positions. This method can take into account
-collision with simple obstacles.
+collisions with simple obstacles.
 
 \subsection{Whole-Body Motion Planning}
 
@@ -201,7 +201,7 @@ is to  take into  account stability  constraints,  i.e. to
 generate  random  configurations   on  zero  volume  submanifolds  of
 $\mathcal{C}$. This problem has been investigated with success during
 the last few years, \cite{Berenson15032011} presents a exhaustive survey
-of jacobian-based methods. Other recent contributions \cite{porta2012randomized}
+of Jacobian-based methods. Other recent contributions \cite{porta2012randomized}
 present sophisticated constrained planning techniques based on higher-dimensional
 continuation. Section \ref{sec:wb} presents a simple adaptation
 of the RRT algorithm to constrained motion planning, that was first
@@ -214,11 +214,11 @@ dynamically stable  walk patterns. Since  the introduction of  the ZMP
 formalism  \cite{vukobratovic1969contribution},  several  methods  have  been  proposed  to
 generate  walking  motions efficiently.   One  way  to  deal with  the
 complexity  of a  humanoid  robotics  kinematic tree  is  to use  the
-so-called "cart-table" simplified model \cite{kajita2003biped}. Based this
+so-called "cart-table" simplified model \cite{kajita2003biped}. Based on this
 model,  planning a trajectory  for the  ZMP is  reduced to  planning a
 trajectory  for  the Center  of  Mass (CoM)  of  the  robot.  Given  a
 trajectory  of  the CoM  and  footstep  positions, inverse  kinematics
-solvers can animate  the whole set of degrees of freemdom (DoFs) of the  
+solvers can animate  the whole set of degrees of freedom (DoFs) of the
 robot to generate a dynamically stable walk trajectory.
 
 
@@ -281,13 +281,13 @@ differs from classic approaches in two ways:
 \begin{enumerate}
 \item the set of valid configurations is defined implicitly, as the ones satisfying a given 
   set of inverse kinematics and balance tasks;
-\item the goal is also defined implicitely, by additional inverse kinematic tasks.
+\item the goal is also defined implicitly, by additional inverse kinematic tasks.
 \end{enumerate}
 During global planning, we will consider several types of
 tasks and constraints for various reasons:
 \begin{itemize}
-\item  Static stability: the center of mass of the robot stays at
-  the vertical of the support polygon center, the two feet have fixed position and
+\item Static stability: the center of mass of the robot stays above
+  the support polygon center, the two feet have fixed position and
   orientation.
 \item End-effector position and orientation: the goals of some problems presented
   in the experimental section of this paper are defined as robot hand configuration,
@@ -450,7 +450,7 @@ towards a random configuration $q_{rand}$, while keeping the constraints
 satisfied. Extension attempts orthogonal to $\mathcal{M}$ are useless,
 as newly added edges have to be included  in $\mathcal{M}$. To extend in directions
 that follow the directions of $\mathcal{M}$, we rely on the framework of 
-jacobian-based prioritized inverse kinematics. Algorithm~\ref{alg:constrained} presents 
+Jacobian-based prioritized inverse kinematics. Algorithm~\ref{alg:constrained} presents
 the adaptation of the classic extend function, and Fig.~\ref{fig:gikrrt} illustrates this
 extension. The idea is to first project $q_{rand}$ on the tangent
 space to $\mathcal{M}$  at $q_{near}$. Let us call the projected configuration $q_{rand}'$.
@@ -776,7 +776,7 @@ necessary to consider the feet height, so the configuration space of the robot i
 It is of dimension 9.
 
 
-The balanced walking conditions for a quasi-static walking robot are that the punctual
+The balanced walking conditions for a quasi-static walking robot are that the point
 mass, or CoM, should always be over the support polygon (the convex hull of the two feet), and 
 one foot can move iff the CoM is over the other foot. Similarly, the walking
 conditions for a dynamic walking robot are that the ZMP should
@@ -812,7 +812,7 @@ the feet while keeping the CoM inside a neighborhood of size $\epsilon$. Let suc
 be arbitrarily fixed.
 
 
-The model of a walking robot with a punctual
+The model of a walking robot with a point
 mass at a fixed height is known in the literature as the cart-table model \cite{kajita2003biped}.
 The equations  giving  the   ZMP  horizontal  coordinates  $(p_x,p_y)$  as
 functions  of CoM  horizontal coordinates $(x,y)$  in the  cart-table  model were
@@ -956,8 +956,8 @@ the proof.
 
 \subsubsection{Remarks}
 \paragraph{Generalization to a complete model:} More work is needed to generalize 
-the previous proof to any legged robot model. First, because we use a model where
-the mass is punctual, we did not have to consider the angular-momentum of the robot
+the previous proof to any legged robot model. First, because we use a model with
+a point mass, we did not have to consider the angular-momentum of the robot
 around the CoM, while it accounts for dynamic balance. Moreover, when considering
 an actual kinematic and dynamic model,
 the positions of feet and CoM are not controlled degrees of freedom, but inputs 
@@ -1210,7 +1210,7 @@ taken from Extension 3.
 \includegraphics[width=0.24\linewidth]{pics/shelves/trajectory-8.png}
 
 \caption{Solution path for a hand reaching problem in an
-  appartment. The goal is implicitly defined as an inverse kinematics
+  apartment. The goal is implicitly defined as an inverse kinematics
   task.} 
 \label{fig:shelf}
 \end{figure}
