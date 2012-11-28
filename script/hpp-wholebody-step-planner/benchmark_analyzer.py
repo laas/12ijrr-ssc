@@ -18,10 +18,10 @@ sh_ipp = np.genfromtxt("shelf/bench-rrt.log")
 # pca_lt_rrt = np.genfromtxt("bench-pca-lt-rrt.log")
 # pca_lt_ipp = np.genfromtxt("bench-pca-lt-ipp.log")
 
-rrt = [('Floating obstacles RRT', oc_rrt),
-       ('Floating obstacles IPP-RRT', oc_ipp),
-       ('Shelf RRT', sh_ipp),
-       ('Shelf IPP-RRT', sh_ipp)]
+rrt = [('Floating obstacles\n RRT', oc_rrt),
+       ('Floating obstacles\n IPP-RRT', oc_ipp),
+       ('Shelf\n RRT', sh_ipp),
+       ('Shelf\n IPP-RRT', sh_ipp)]
        # ('Local-Trees RRT', lt_rrt),
        # ('Local-Trees IPP-RRT', lt_ipp),
        # ('PCA-RRT', pca_rrt),
