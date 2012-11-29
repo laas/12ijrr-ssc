@@ -7,6 +7,7 @@
 % *** GRAPHICS RELATED PACKAGES *** 
 
 \usepackage[pdftex]{graphicx}
+\usepackage{epstopdf}
 \usepackage{tikz}
 
 % *** MATH PACKAGES ***
@@ -1250,6 +1251,34 @@ taken from Extension 3.
 \label{fig:shelf-cdf}
 \end{figure}
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\linewidth]{plots/rrt-it.eps}
+\caption{Number of RRT iterations $it$ for the floating objects and the
+  shelf scenarios, using two variants of RRT. Mean $\overline{it}$,
+  standard deviation $\sigma_{it}$, minimum and maximum values are
+  represented.}
+\label{fig:rrt-it}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\linewidth]{plots/rrt-t.eps}
+\caption{RRT computation time $t$ for the floating objects and the shelf
+  scenarios, using two variants of RRT. Mean $\overline{t}$, standard
+  deviation $\sigma_{t}$, minimum and maximum values are represented.}
+\label{fig:rrt-t}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\linewidth]{plots/rrt-n.eps}
+\caption{Number of tree nodes $n$ for the floating objects and the
+  shelf scenarios, using two variants of RRT. Mean $\overline{n}$,
+  standard deviation $\sigma_{n}$, minimum and maximum values are
+  represented.}
+\label{fig:rrt-n}
+\end{figure}
 
 \section{Limits and Discussions}
 \label{sec:limits}
