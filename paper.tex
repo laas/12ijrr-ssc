@@ -374,7 +374,7 @@ constrained motion planning.
   defining $\manifold$. Note that as the intersection of two or more
   manifolds is also a manifold, this multi-constraint solver allows us
   also to generate configurations that lie at the intersection of
-  multiple manifolds.}
+  several manifolds.}
 
 \textbf{In Algorithm~\ref{algo:newton} a Newton-Raphson method
   \cite{bonnans2006numerical}: starting from an initial value of $q$,
@@ -423,8 +423,8 @@ The way we generate a goal configuration is the following:
 \item \textbf{Shoot a random configuration $q_{rand}$ in $\mathcal{C}$ with
   uniform distribution.}
 \item \textbf{Call \textit{constraint-solver}
-  (Algorithm~\ref{algo:newton}) on $q_{rand}$, with the
-  intersection of the planning and goal manifolds $\manifold \cap
+  (Algorithm~\ref{algo:newton}) on $q_{rand}$, with $f(q)$ defined by
+  the intersection of the planning and goal manifolds $\manifold \cap
   \goalmanifold$.}
 \item If success, check for collisions.
 \end{enumerate}
