@@ -1199,7 +1199,15 @@ RRT: the classic RRT and IPP-RRT \cite{FERR04A}. We present the
 results in Fig. \ref{fig:rrt-it}, \ref{fig:rrt-t}, \ref{fig:rrt-n}, as
 well as in Extension 4 for the raw data.}
 
+\textbf{Our whole-body motion planner generates a robot configuration
+  trajectory that is sampled at a 200~Hz rate and stored in a
+  file. This file can then be used to play the trajectory in open-loop
+  on the HRP-2 robot, which is position-controlled. Scenarios in
+  Sections \ref{sec:chairs} and \ref{sec:shelf} were both successfully
+  executed.}
+
 \subsection{Passing between two chairs}
+\label{sec:chairs}
 
 The environment shown in Fig. \ref{fig:couv} and \ref{fig:sliding} was presented
 in \cite{el2011path}. There, the motion planning problem is solved with a bounding
@@ -1271,6 +1279,7 @@ shows the robot CoM trajectory during locomotion.
 
 
 \subsection{'Put the ball on a shelf'}
+\label{sec:shelf}
 
 In the problem shown in Fig. \ref{fig:shelf} the robot has to put a ball on a
 shelf, in a constrained apartment environment. The final configuration is defined 
