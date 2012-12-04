@@ -703,15 +703,19 @@ are not very costly if the edge is close to the constrained manifold.
 \section{From Statically Balanced Paths to Dynamic Walk Trajectories}
 \label{sec:wb-step}
 
-The previous section has presented a simple algorithm that solves manipulation planning
-problems on a given constraint manifold of $\mathcal{C}$. 
+The previous section has presented a simple algorithm that solves
+manipulation planning problems on a given constraint manifold
+$\manifold$ of $\mathcal{C}$.
 
-If we use this algorithm with static 
-balance constraints without fixing globally the robot foot positions, it generates 
-statically balanced paths for a robot sliding on the ground. Fig~\ref{fig:sliding} shows
-an example of a whole-body collision-free path for a robot passing between two chairs.
-Such paths are physically unfeasible. They are, however, easier to generate than feasible
-dynamic trajectories because only geometric constraints are considered at planning time.
+If we use this algorithm with static balance constraints without
+fixing globally the robot foot positions, it generates statically
+balanced paths for a robot \textit{sliding} on the
+ground. \textbf{Fig~\ref{fig:sliding} shows an example of a whole-body
+  collision-free path for a robot passing between two chairs. Since in
+  reality a legged robot cannot slide on a regular floor, such paths
+  are physically unfeasible.They are, however, easier to generate than
+  feasible dynamic walking trajectories because only geometric
+  constraints are considered at planning time.}
 
 \begin{figure}[h]
   \centering
