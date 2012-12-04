@@ -136,10 +136,10 @@ generates collision-free, statically balanced
 geometric paths, i.e. paths such that for any path configurations, the robot is balanced on its
 feet with zero speed. We also present a constructive formal proof that these paths can be
 approximated by collision-free, dynamically balanced walk trajectories, i.e. trajectories such
-that for any trajectory instant, the robot is balanced on at least one foot.} Our planner is designed for indoor
-environments, where the floor is horizontal and flat. Because we do not compute explicitly footstep
+that for any trajectory instant, the robot is balanced on at least one foot. Our planner is designed for perfectly modeled indoor
+environments, where the floor is horizontal and flat. Also, because we do not compute explicitly footstep
 positions at the planning stage, the presented planner is unable to plan motions in which the
-robot steps over obstacles. This limitation is discussed in the paper.
+robot steps over obstacles. These limitations are discussed in the paper.}
 
 
 \subsection{Outline}
@@ -1304,19 +1304,29 @@ algorithm presented in this paper.
 
 \subsection{Environment representation}
 
-The presented experiment setup assumes perfect knowledge of the environment. This can
-be guaranteed during experiments by using calibrated objects and motion capture systems.
-This allows us to focus on complex motion planning problems. The perception problem,
-interesting as it is, is completely decoupled from the planning problem in our
-presentation. 
+\textbf{The presented experiment setup assumes perfect knowledge of
+  the environment. This can be guaranteed during experiments by using
+  calibrated objects and motion capture systems. This indeed allows us
+  to focus on complex motion planning problems. The perception
+  problem, interesting as it is, is thus completely decoupled from the
+  planning problem in our presentation.}
 
+\textbf{The constrained motion planner and the small-space
+  controllability property can luckily still be used with different
+  environment representations that might more suited with perception
+  systems and their inherent measurement errors, using for instance
+  point clouds. In the future, we would like to achieve dynamic walk
+  planning using a Kinect sensor that would be mounted on the humanoid
+  robot. This would relax the a priori environment knowledge
+  constraint and bring us one step closer to reactive planning in
+  unknown environments.}
 
 \subsection{Trajectory following}
 
-The presented setup also assumes perfect execution of the plan. It can be 
-critical here, since
-non-nominal stepping may cause to drift away from the planned trajectory. Future 
-experiments will  include trajectory following during plan execution.
+The presented setup also assumes perfect execution of the plan. It can
+be critical here, since non-nominal stepping may cause the robot to
+drift away from the planned trajectory. Future experiments will
+include trajectory following during plan execution.
 
 \section{Conclusion}
 
