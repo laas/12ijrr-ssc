@@ -1007,6 +1007,13 @@ can be approximated by dynamic walk trajectories. Note that this is
 due to our current  ZMP preview controller implementation, and does not affect
 the generality of the small-space controllability result presented above.
 
+\textbf{Relying on the cart-table model approximation means that the
+  angular momentum induced by arm movements for instance can lead to
+  non dynamically balanced walking motion. We thus implement the ZMP
+  filtering stage proposed in \cite{kajita2003biped} to compute the
+  exact ZMP and take into account the full dynamics of the robot and
+  generate feasible trajectories.}
+
 \paragraph{Speed of CoM:} The theoretical result presented in this section implies
 that any collision-free path can be approximated by a sequence of admissible 
 and collision-free trajectories. However, the theorem depends on a control law
