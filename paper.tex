@@ -443,7 +443,7 @@ The way we generate a goal configuration is the following:
 
 \caption{Random goal configurations solving a reaching task. All the
   configurations are balanced and collision-free, and the right hand of the character
-  reaches the orange ball. Note that the ball is also an obstacle.}
+  reaches the orange ball.}
 \label{fig:goal}
 \end{figure}
 
@@ -623,24 +623,43 @@ are not very costly if the edge is close to the constrained manifold.
 
 \subsection{Example}
 
-We present in Fig.~\ref{fig:wb-shelves} an illustration of 
-the use of randomized motion planning 
-on complex manipulation problems. The humanoid robot HRP-2 faces shelves. It has to: (i) grasp
-a ball lying on a shelf, (ii) put it on a higher shelf, (iii) come back to a natural
-rest configuration. The statical balance manifold on which the planning takes place is
-defined by tasks constraining the robot feet and CoM. The goal of the first problem
+\textbf{We present in Fig.~\ref{fig:wb-shelves} an illustration of the
+  use of randomized motion planning on complex manipulation
+  problems. The humanoid robot HRP-2 faces shelves. It has to: (i)
+  grasp a ball lying on a shelf, (ii) put it on a higher shelf, (iii)
+  come back to a natural rest configuration. We can hence define three
+  separate constrained motion planning problems where the planning
+  manifold $\manifold$ is the static balance manifold defined in
+  \ref{sec:wb}; the goal manifold of problem (i) is defined by a hand
+  pose constraint (the hand must be horizontal and its position has to
+  coincide with the ball initial position), and a gaze constraint (the
+  robot has to look at the ball in its initial position). Similarly,
+  the goal manifold of problem (ii) is defined by hand and gaze
+  constraints that correspond to the position of the ball on the
+  higher shelf. Finally, we define the rest configuration as the
+  single goal configuration for problem (iii).}
 
-FIXME: what follows is not clear, rephrase to say that the hand
-position is fixed and that it can rotate along the vertial axis.
+\textbf{Note that for phases (i) and (iii) the ball is also considered
+  as an obstacle. This is necessary to prevent the robot grasping hand
+  from colliding with the ball during the approach (respectively
+  retraction) phase.}
 
-is defined by a hand configuration task (3 positions and 2 orientations), and a gaze task
-(the robot has to look at the ball). The goal of the second problem is defined by a 
-different hand configuration and the gaze task.
-Finally, the goal of the third problem is the rest configuration.
+\textbf{For the two reaching motions in (i) and (ii), we first
+  generate 8 random goal configurations
+  (Section~\ref{sec:goal-sampling}), then we solve the three
+  constrained motion planning problems separately. As randomized
+  motion planning algorithms produce, a classic shortcut method is
+  used to optimize and shorten the paths. Extension 1 presents a
+  video of the concatenated motion.}
 
-For the two reaching motions, we generate 8 random goal configurations (Section~\ref{sec:goal-sampling}).
-
-Extension 1 presents a video of this motion after an optimization step.
+\textbf{We have run this set of motion planning problems 20 times;
+  results are compiled in Table~\ref{table:reaching}. We have also
+  measured the performance of \texttt{constraint-solver} (Algorithm
+  \ref{algo:newton}) when used to project configurations on
+  $\manifold$; the average number of iterations is 6.5 per call, and
+  the success rate, i.e. the ratio of the number of successfully
+  projected configurations over the total number of calls, is above 95
+  percent.}
 
 \begin{figure}[h]
 \centering
@@ -655,8 +674,6 @@ Extension 1 presents a video of this motion after an optimization step.
 \includegraphics[width=0.24\linewidth]{pics/wb-shelves/7.jpg}
 \includegraphics[width=0.24\linewidth]{pics/wb-shelves/8.jpg}
 
-
-
 \caption{HRP-2 grabs a ball on a shelf, puts it on another shelf, and comes back to 
   a rest position. Static balance constraints are enforced along the path, and 
   the intermediary goals consisting in grasping and displacing the ball are defined
@@ -664,7 +681,6 @@ Extension 1 presents a video of this motion after an optimization step.
 \label{fig:wb-shelves}
 \end{figure}
 
-We have run this set of motion planning problems 20 times. The results are compiled in Table~\ref{table:reaching}.
 \begin{table}
 \begin{tabular}{l|r|r|r|r|}
 \cline{2-5}
@@ -683,8 +699,6 @@ We have run this set of motion planning problems 20 times. The results are compi
     phases. Time is expressed in seconds.}}
 \label{table:reaching}
 \end{table}
-
-Among all calls to \texttt{constraint-solver}, the average number of iterations is 6.5 and the success rate is above 95 percent.
 
 \section{From Statically Balanced Paths to Dynamic Walk Trajectories}
 \label{sec:wb-step}
