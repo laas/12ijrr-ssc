@@ -42,7 +42,8 @@
 
 
 \newtheorem{theorem}{Theorem}
-
+\renewcommand{\labelitemi}{$-$}
+\newcommand\goalmanifold{\mathcal{M}_{g}}
 
 \begin{document}
 
@@ -255,38 +256,51 @@ considering the dynamics at the planning phase \cite{shkolnik2011bounding}. This
 a growth of algorithmic complexity, particularly costly for high-dimensional
 systems such as humanoid robots. To the authors knowledge such techniques have not been
 used on humanoid robotic platforms so far.
-In our work, we show that it is not always
-necessary to take into account dynamics while planning, even though the final
-output of our algorithm is a dynamically balanced walk motion. This result was first
-presented in \cite{dalibard2011small}.
 
-
+\textbf{In this work, we show that, under some assumptions, it is
+  sufficient to plan in the configuration space in a first step, even
+  though the final output of our algorithm is guaranteed to be a
+  dynamically balanced walk motion. This result was first presented in
+  \cite{dalibard2011small}.}
 
 \subsection{Contribution}
 
-The main contribution of this work is a  whole-body motion planner for humanoid robots
-that computes collision-free walking trajectories, based on
-exact models of both robot and environment. It is used to solve manipulation tasks
-that may require walking. The first stage of our algorithm uses a
-constrained sampling-based motion 
-planner and  computes a collision-free  statically balanced path  for a robot which can be fixed or sliding 
-on the ground. Another  contribution of this  paper is the formal  proof that
-this first path can always be  approximated by a dynamically balanced, collision-free
-walking  trajectory. We have implemented this well-grounded 
-method, and the results have been validated on the HRP-2 robot.
+The main contribution of this work is a whole-body motion planner for
+humanoid robots that computes collision-free walking trajectories,
+based on exact models of both robot and environment. It is used to
+solve manipulation tasks that may require walking. The first stage of
+our algorithm uses a sampling-based constrained motion planner and
+computes a collision-free statically balanced path for a robot which
+can be fixed or sliding on the ground.
+
+Another contribution of this paper is the formal proof that this first
+path can always be approximated by a dynamically balanced,
+collision-free walking trajectory. We have implemented this
+well-grounded method, and the results have been validated on the HRP-2
+robot.
 
 \section{Randomized Motion Planning on Constraint Manifolds}
 \label{sec:wb}
 
-FIXME: Avoid the mixup due to the use of task and constraints?
+\textbf{This section presents an algorithm for constrained motion
+  planning in the configuration space $\mathcal{C}$. In the particular
+  case of a humanoid robot which is an under-actuated system,
+  $\mathcal{C}=\mathcal{Q} \times SE(3)$, where $\mathcal{Q}$
+  represents the kinematic tree actuators and $SE(3)$ corresponds to a
+  fictitious floating joint attached to the root of the tree. If the
+  robot has $n$ actuated DoFs, then $dim(\mathcal{Q})=n$ and
+  $dim(\mathcal{C})=n+6$. A configuration $q$ of $\mathcal{C}$ is said
+  to be valid iff, besides being collision-free, it lies on a specific
+  submanifold $\mathcal{M}$ of $\mathcal{C}$. $\mathcal{M}$ is called
+  the planning submanifold.}
 
-This section presents an algorithm for constrained motion planning. 
-The problem solved here
-differs from classic approaches in two ways:
+The problem solved here differs from classic approaches in two ways:
 \begin{enumerate}
-\item the set of valid configurations is defined implicitly, as the ones satisfying a given 
-  set of inverse kinematics and balance tasks;
-\item the goal is also defined implicitly, by additional inverse kinematics tasks.
+\item the set of valid configurations is defined implicitly, as the
+  set of collision-free configurations satisfying a given set of
+  inverse kinematics balance constraints;
+\item the goal submanifold $\goalmanifold$ is also defined implicitly,
+  by additional inverse kinematics constraints.
 \end{enumerate}
 During global planning, we will consider several types of
 tasks and constraints for various reasons:
