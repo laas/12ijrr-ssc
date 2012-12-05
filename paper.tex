@@ -358,13 +358,13 @@ we grow random
 trees from the initial configuration and the random goal configurations. The idea of
 generating several goals for manipulation planning was proposed in \cite{diankov2008bpc}.
 
-Section~\ref{sec:constraint-solver} describes a constraint solver,
+Section~\ref{sec:SolveConstraints} describes a constraint solver,
 Section~\ref{sec:goal-sampling} the goal manifold sampling, and
 Section~\ref{sec:extension} the adaptation or RRT random extensions to
 constrained motion planning.
 
-\subsection{Multiple Constraints Solver}
-\label{sec:constraint-solver}
+\subsection{Constraint Solver}
+\label{sec:SolveConstraints}
 
 \textbf{We show here how a multiple constraints solver works: its
   purpose is to find the root $q$ of a non-linear $C^1$ function
@@ -376,27 +376,29 @@ constrained motion planning.
   also to generate configurations that lie at the intersection of
   several manifolds.}
 
-\textbf{In Algorithm~\ref{algo:newton} a Newton-Raphson method
+\textbf{Algorithm~\ref{algo:newton} implements a Newton-Raphson method
   \cite{bonnans2006numerical}: starting from an initial value of $q$,
   $q$ is updated iteratively by $- \alpha \left(\frac{\partial
     f}{\partial q}(q)\right)^{+} f(q)$, where $\alpha$ denotes a gain
   and $\left(\frac{\partial f}{\partial q}(q)\right)^{+}$ denotes the
   Moore-Penrose pseudo-inverse of the Jacobian of $f(q)$. The use of
-  an adaptive gain $\alpha$ that increases iteratively from an initial
-  value $\alpha$ to a maximum value $\alpha_{max}$ has proven to avoid
-  overshoots and accelerate convergence. The update rule relies on a
-  real factor $w \in [0,1]$; the greater $w$ is, the faster $\alpha$
-  will reach $\alpha_{max}$. Obviously, the solver convergence depends
-  of the initial value of $q$, and a bad initialization can lead to
-  either slow convergence or failure. A cutoff number of iterations
-  $it_{max}$ is hence introduced to bypass these cases.}
+  an adaptive gain $\alpha$, which increases iteratively from an
+  initial value $\alpha$ to a maximum value $\alpha_{max}$, allows the
+  overshoot avoidance and convergence acceleration. The update rule
+  relies on a real factor $w \in [0,1]$; the greater $w$ is, the
+  faster $\alpha$ will reach $\alpha_{max}$. Obviously, the solver
+  convergence depends on the initial value of $q$, and a bad
+  initialization can lead to either slow convergence or failure. A
+  cutoff number of iterations $it_{max}$ is hence introduced to bypass
+  these cases.}
 
-\textbf{In this work, we observed that values of
-  $\varepsilon=10^{-6}$, $\alpha=0.1$, $\alpha_{max}=0.95$ and $w=0.8$
-  lead to good behavior, i.e. fast convergence and low failure rate.}
+\textbf{We observed that values of $\varepsilon=10^{-6}$,
+  $\alpha=0.1$, $\alpha_{max}=0.95$ and $w=0.8$ lead to good behavior,
+  i.e. fast convergence and low failure rate. These values are kept
+  constant for all scenarios in this work.}
 
 \begin{algorithm}
-\caption{\texttt{constraint-solver}($q$, f, $\varepsilon$): find $q$ such that $f(q) = 0$}
+\caption{\texttt{SolveConstraints}($q$, f, $\varepsilon$): find $q$ such that $f(q) = 0$}
 \label{algo:newton}
 \begin{algorithmic}
 \STATE $i=0$
@@ -422,16 +424,15 @@ The way we generate a goal configuration is the following:
 \begin{enumerate}
 \item \textbf{Shoot a random configuration $q_{rand}$ in $\mathcal{C}$ with
   uniform distribution.}
-\item \textbf{Call \textit{constraint-solver}
-  (Algorithm~\ref{algo:newton}) on $q_{rand}$, with $f(q)$ defined by
-  the intersection of the planning and goal manifolds $\manifold \cap
-  \goalmanifold$.}
+\item \textbf{Call SolveConstraints (Algorithm~\ref{algo:newton}) on
+  $q_{rand}$, with $f(q)$ defined by the intersection of the planning
+  and goal manifolds $\manifold \cap \goalmanifold$.}
 \item If success, check for collisions.
 \end{enumerate}
 
 \textbf{Fig.~\ref{fig:goal} shows resulting random configurations
-  enforcing balance ($\manifold$) and reaching ($\goalmanifold$)
-  constraints for the HRP-2 robot.}
+  which satisfy both balance ($\manifold$) and reaching
+  ($\goalmanifold$) constraints for the HRP-2 robot.}
 
 \begin{figure}[h]
 \centerline {
@@ -513,7 +514,7 @@ the adaptation of the classic extend function, and Fig.~\ref{fig:gikrrt} illustr
 extension. The idea is to first project $q_{rand}$ on the tangent
 space to $\manifold$  at $q_{near}$. Let us call the projected configuration $q_{rand}'$.
 $q_{rand}'$ is obtained by one step of prioritized inverse kinematics optimization. Let 
-$q_{rand}''$  be the result of a call to $\texttt{constraint-solver}(q_{rand}',f,\epsilon)$.  It is 
+$q_{rand}''$  be the result of a call to $\texttt{SolveConstraints}(q_{rand}',f,\epsilon)$.  It is 
 the projection
 of $q_{rand}'$ on $\manifold$. Instead of extending the tree from $q_{near}$ towards 
 $q_{rand}$, the algorithm tries to extend from $q_{near}$ towards 
@@ -601,7 +602,7 @@ are not very costly if the edge is close to the constrained manifold.
 
 
 \begin{algorithm}[h]
-  \caption{Constrained-Extend($\mathcal{T},q_{near},q_{rand},f,\epsilon$)}
+  \caption{ConstrainedExtend($\mathcal{T},q_{near},q_{rand},f,\epsilon$)}
   \label{alg:constrained}
   \begin{algorithmic}
     \STATE {\color{red} // $I$ denotes the identity matrix.}
@@ -609,7 +610,7 @@ are not very costly if the edge is close to the constrained manifold.
     \left(I -  
     \left(\frac{\partial f}{\partial q}(q_{near})\right)^{+}
     \frac{\partial f}{\partial q}(q_{near})\right) (q_{rand} - q_{near})$
-    \IF {$\texttt{constraint-solver}(q_{rand}',f,\epsilon) = q_{rand}''$} 
+    \IF {$\texttt{SolveConstraints}(q_{rand}',f,\epsilon) = q_{rand}''$}
     \STATE RRT::Extend($\mathcal{T},q_{near},q_{rand}''$)
     \ENDIF
   \end{algorithmic}
@@ -654,7 +655,7 @@ are not very costly if the edge is close to the constrained manifold.
 
 \textbf{We have run this set of motion planning problems 20 times;
   results are compiled in Table~\ref{table:reaching}. We have also
-  measured the performance of \texttt{constraint-solver} (Algorithm
+  measured the performance of \texttt{SolveConstraints} (Algorithm
   \ref{algo:newton}) when used to project configurations on
   $\manifold$; the average number of iterations is 6.5 per call, and
   the success rate, i.e. the ratio of the number of successfully
