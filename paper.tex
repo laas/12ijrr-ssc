@@ -29,7 +29,8 @@
 
 % *** ALIGNMENT PACKAGES *** 
 
-
+\usepackage{float}
+\restylefloat{table}
 \usepackage{array} 
 \usepackage{mdwmath}
 \usepackage{mdwtab} 
@@ -1441,6 +1442,23 @@ of our method, and we plan to address them in future work.
 
 This work was supported by the French FUI Project ROMEO and the European Project ECHORD-231143. The authors would like to thank Thomas Moulard and Olivier Stasse for their valuable help during experiments.
 
+\appendix
+\section{Index to Multimedia Extensions}
+
+\begin{table}[H]
+\begin{tabular}{c c m{0.7\linewidth}}
+Extension & Type & Description \\
+\hline
+1 & Video & Example of a constrained motion planning result executed
+on HRP-2. \\
+2 & Video & Chairs scenario: solution of whole-body planning executed
+on HRP-2. \\
+3 & Video & Shelf scenario: solution of whole-body planning executed
+in simulation and on HRP-2. \\
+4 & Data & Raw data of sliding motion planning benchmarks for all
+scenarios. \\
+\end{tabular}
+\end{table}
 
 \bibliographystyle{agsm}   
 
