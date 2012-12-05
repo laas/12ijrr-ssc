@@ -1194,14 +1194,15 @@ part of an open-source package, available at
 
 \label{sec:exp}
 
-\textbf{The motion planning algorithms presented in this paper have been
-implemented using KineoWorks\texttrademark \cite{laumond2006kcs}. The
-planning times have been measured on an Intel Core~2~Duo 2.13~GHz PC
-with 2~GB of RAM. Evaluation of the randomized algorithm has been
-conducted by executing 500 trials on each scenario using two flavors of
-RRT: the classic RRT and IPP-RRT \cite{FERR04A}. We present the
-results in Fig. \ref{fig:rrt-it}, \ref{fig:rrt-t}, \ref{fig:rrt-n}, as
-well as in Extension 4 for the raw data.}
+\textbf{The motion planning algorithms presented in this paper have
+  been implemented using KineoWorks\texttrademark
+  \cite{laumond2006kcs}. The planning times have been measured on an
+  Intel Core~2~Duo 2.13~GHz PC with 2~GB of RAM. Evaluation of the
+  randomized algorithm has been conducted by executing 500 trials on
+  each scenario using two flavors of RRT: the classic RRT and IPP-RRT
+  \cite{FERR04A}. We present the results in Appendix \ref{app:bench},
+  Fig. \ref{fig:rrt-it}, \ref{fig:rrt-t}, \ref{fig:rrt-n}, as well as
+  in Extension 4 for the raw data.}
 
 \textbf{Our whole-body motion planner generates a robot configuration
   trajectory that is sampled at a 200~Hz rate and stored in a
@@ -1352,35 +1353,6 @@ taken from Extension 3.
 \label{fig:shelf-cdf}
 \end{figure}
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.8\linewidth]{plots/rrt-it.eps}
-\caption{Number of RRT iterations $it$ for the floating objects and the
-  shelf scenarios, using two variants of RRT. Mean $\overline{it}$,
-  standard deviation $\sigma_{it}$, minimum and maximum values are
-  represented.}
-\label{fig:rrt-it}
-\end{figure}
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.8\linewidth]{plots/rrt-t.eps}
-\caption{RRT computation time $t$ for the floating objects and the shelf
-  scenarios, using two variants of RRT. Mean $\overline{t}$, standard
-  deviation $\sigma_{t}$, minimum and maximum values are represented.}
-\label{fig:rrt-t}
-\end{figure}
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.8\linewidth]{plots/rrt-n.eps}
-\caption{Number of tree nodes $n$ for the floating objects and the
-  shelf scenarios, using two variants of RRT. Mean $\overline{n}$,
-  standard deviation $\sigma_{n}$, minimum and maximum values are
-  represented.}
-\label{fig:rrt-n}
-\end{figure}
-
 \section{Limits and Discussions}
 \label{sec:limits}
 
@@ -1442,6 +1414,38 @@ of our method, and we plan to address them in future work.
 This work was supported by the French FUI Project ROMEO and the European Project ECHORD-231143. The authors would like to thank Thomas Moulard and Olivier Stasse for their valuable help during experiments.
 
 \appendix
+\section{Sliding Motion Planning Benchmarks}
+\label{app:bench}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{plots/rrt-it.eps}
+\caption{Number of RRT iterations $it$ for the floating objects and the
+  shelf scenarios, using two variants of RRT. Mean $\overline{it}$,
+  standard deviation $\sigma_{it}$, minimum and maximum values are
+  represented.}
+\label{fig:rrt-it}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{plots/rrt-t.eps}
+\caption{RRT computation time $t$ for the floating objects and the shelf
+  scenarios, using two variants of RRT. Mean $\overline{t}$, standard
+  deviation $\sigma_{t}$, minimum and maximum values are represented.}
+\label{fig:rrt-t}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{plots/rrt-n.eps}
+\caption{Number of tree nodes $n$ for the floating objects and the
+  shelf scenarios, using two variants of RRT. Mean $\overline{n}$,
+  standard deviation $\sigma_{n}$, minimum and maximum values are
+  represented.}
+\label{fig:rrt-n}
+\end{figure}
+
 \section{Index to Multimedia Extensions}
 
 \begin{table}[H]
