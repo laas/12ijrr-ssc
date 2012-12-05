@@ -1231,7 +1231,7 @@ in \cite{el2011path}. There, the motion planning problem is solved with a boundi
 box method, leading the robot to walk sideways between the two chairs.
 Our method generates a locomotion  trajectory in which the robot walks
 forward, which may be required if the robot has to use vision during
-locomotion. The first planning stage  requires 29.6~s
+locomotion. The first planning stage  requires 1~s
 on  average.   The  animation  of   the  sliding  path   presented  in
 Fig.   \ref{fig:sliding}   uses  66.5~s  of  computation   time.
 
@@ -1281,7 +1281,7 @@ has to find a way among floating obstacles. In this
 environment neither bounding box nor footstep planning strategies
 could find a collision-free walk trajectory.
 The first planning stage requires
-184.3~s on average, and the animation of the trajectory presented in 
+53~s on average, and the animation of the trajectory presented in 
 Fig.~\ref{fig:cluttered} uses 339.5~s of computation time. Fig.~\ref{fig:cluttered-waist} 
 shows the robot CoM trajectory during locomotion.
 
@@ -1310,11 +1310,14 @@ on the left. This passage is too narrow for the robot nominal walk parameters.
 When executing the walk motion resulting from our algorithm, the robot left hand
 is only a few centimeters away from the lamp.
 
-Fig.~\ref{fig:shelf} shows the resulting walk motion and Fig.~\ref{fig:shelf-waist} 
-shows the robot CoM trajectory during locomotion. Extension 3 presents a 
-comprehensive video of this problem, including the motion execution on
-the real robot HRP-2 on stage. Fig.~\ref{fig:shelf-cdf} shows some snapshots 
-taken from Extension 3.
+\textbf{The first planning stage requires 15~s on average, and the
+  animation of the resulting walk motion presented in
+  Fig.~\ref{fig:shelf} requires around 190~s of computation time.}
+Fig.~\ref{fig:shelf-waist} shows the robot CoM trajectory during
+locomotion. Extension 3 presents a comprehensive video of this
+problem, including the motion execution on the real robot HRP-2 on
+stage. Fig.~\ref{fig:shelf-cdf} shows some snapshots taken from
+Extension 3.
 
 
 \begin{figure}[h]
