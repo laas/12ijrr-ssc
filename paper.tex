@@ -659,7 +659,11 @@ are not very costly if the edge is close to the constrained manifold.
   $\manifold$; the average number of iterations is 6.5 per call, and
   the success rate, i.e. the ratio of the number of successfully
   projected configurations over the total number of calls, is above 95
-  percent.}
+  percent. This success rate, high as it is, could be further improved
+  by sampling a better initial configuration of $\mathcal{C}$, for
+  example by introducing a heuristic bias towards statically balanced
+  configurations. Nevertheless we choose to sample $\mathcal{C}$
+  uniformly-randomly for the sake of genericity.}
 
 \begin{figure}[h]
 \centering
