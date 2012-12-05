@@ -503,29 +503,32 @@ configuration $q_{rand}$.
   \label{fig:rrt-extend}
 \end{figure}
 
-The equivalent random  extension on a constrained manifold $\manifold$, 
-defined by the constraint function $f$,
-starts from a valid configuration $q_{near} \in \manifold$, and extends the tree
-towards a random configuration $q_{rand}$, while keeping the constraints
+The equivalent random extension on a constrained manifold $\manifold$,
+defined by the constraint function $f$, starts from a valid
+configuration $q_{near} \in \manifold$, and extends the tree towards a
+random configuration $q_{rand}$, while keeping the constraints
 satisfied. Extension attempts orthogonal to $\manifold$ are useless,
-as newly added edges have to be included  in $\manifold$. To extend in directions
-that follow the directions of $\manifold$, we rely on the framework of 
-Jacobian-based prioritized inverse kinematics. Algorithm~\ref{alg:constrained} presents
-the adaptation of the classic extend function, and Fig.~\ref{fig:gikrrt} illustrates this
-extension. The idea is to first project $q_{rand}$ on the tangent
-space to $\manifold$  at $q_{near}$. Let us call the projected configuration $q_{rand}'$.
-$q_{rand}'$ is obtained by one step of prioritized inverse kinematics optimization. Let 
-$q_{rand}''$  be the result of a call to $\texttt{SolveConstraints}(q_{rand}',f,\epsilon)$.  It is 
-the projection
-of $q_{rand}'$ on $\manifold$. Instead of extending the tree from $q_{near}$ towards 
-$q_{rand}$, the algorithm tries to extend from $q_{near}$ towards 
-$q_{rand}''$\footnote{This presentation attempts to give a precise idea of the algorithm, without 
-  focusing on technical details. Readers interested in the actual implementation can
-  refer to \url{https://github.com/laas/hpp-constrained} and 
-  \url{https://github.com/laas/hpp-constrained-planner}, where the corresponding open-source 
-  code is available.}. While extending the tree,
-the configurations along the new edge are automatically projected onto $\manifold$. These projections 
-are not very costly if the edge is close to the constrained manifold.
+as newly added edges have to be included in $\manifold$. To extend in
+directions that follow the directions of $\manifold$, we rely on
+Jacobian-based inverse kinematics. Algorithm~\ref{alg:constrained}
+presents the adaptation of the classic extend function, and
+Fig.~\ref{fig:gikrrt} illustrates this extension. The idea is to first
+project $q_{rand}$ on the tangent space to $\manifold$ at
+$q_{near}$. Let us call the projected configuration $q_{rand}'$. Let
+$q_{rand}''$ be the result of a call to
+$\texttt{SolveConstraints}(q_{rand}',f,\epsilon)$.  It is the
+projection of $q_{rand}'$ on $\manifold$. Instead of extending the
+tree from $q_{near}$ towards $q_{rand}$, the algorithm tries to extend
+from $q_{near}$ towards $q_{rand}''$ while remaining on
+$\manifold$ \footnote{This presentation attempts to give a precise
+  idea of the algorithm, without focusing on technical
+  details. Readers interested in the actual implementation can refer
+  to \url{https://github.com/laas/hpp-constrained} and
+  \url{https://github.com/laas/hpp-constrained-planner}, where the
+  corresponding open-source code is available.}. While extending the
+tree, the configurations along the new edge are automatically
+projected onto $\manifold$. These projections are not very costly if
+the edge is close to the constrained manifold.
 
 \begin{figure}[h]
 \centering
@@ -559,42 +562,41 @@ are not very costly if the edge is close to the constrained manifold.
 \end{tikzpicture}
 \end{minipage}
 \begin{minipage}[c]{0.3\linewidth}
-\begin{tikzpicture}[x=0.61cm,y=0.61cm]
-   \definecolor{dg}{rgb}{0,0.3,0}
-      %Stack of tasks:
-      \draw [color=black, thick,fill = white] (0,1) rectangle (2,2);
-      \draw [color=black, thick,fill = white] (0,2) rectangle (2,3);
-      \draw [color=black, thick,fill = white] (0,3) rectangle (2,5);
-      \draw [color=black, thick,fill = white] (0,5) rectangle (2,6);
-      \draw [color=black, thick,fill = white] (0,6) rectangle (5,7);
-      \draw [color=black, thick,fill = white] (1,1) rectangle (5,6);
-      \draw [thick] (1,1) -- (5,1) -- (5,6);
-      \draw (1,2) -- (5,2) ;
-      \node [text width = 5cm,text centered] at (2.5,6.5) {\large Stack
-        of tasks};
-      \begin{scriptsize}
-        \node at (0.5,5.5) {1};
-        \node at (0.5,4) {$\vdots$}; 
-        \node at (0.5,2.5) {$n$};
-        \node at (0.5,1.5) {$n$+1};
+%% \begin{tikzpicture}[x=0.61cm,y=0.61cm]
+%%    \definecolor{dg}{rgb}{0,0.3,0}
+%%       %Stack of tasks:
+%%       \draw [color=black, thick,fill = white] (0,1) rectangle (2,2);
+%%       \draw [color=black, thick,fill = white] (0,2) rectangle (2,3);
+%%       \draw [color=black, thick,fill = white] (0,3) rectangle (2,5);
+%%       \draw [color=black, thick,fill = white] (0,5) rectangle (2,6);
+%%       \draw [color=black, thick,fill = white] (0,6) rectangle (5,7);
+%%       \draw [color=black, thick,fill = white] (1,1) rectangle (5,6);
+%%       \draw [thick] (1,1) -- (5,1) -- (5,6);
+%%       \draw (1,2) -- (5,2) ;
+%%       \node [text width = 5cm,text centered] at (2.5,6.5) {\large Stack
+%%         of tasks};
+%%       \begin{scriptsize}
+%%         \node at (0.5,5.5) {1};
+%%         \node at (0.5,4) {$\vdots$}; 
+%%         \node at (0.5,2.5) {$n$};
+%%         \node at (0.5,1.5) {$n$+1};
 
-        \node [text width = 2cm,color=dg] at (3.2,4) {\small Constraints defining
-          $\manifold$};
-        \node [text width = 3cm,text centered] at (3,1.5)
-              { Configuration task towards $q_{rand}$};    
-      \end{scriptsize}
+%%         \node [text width = 2cm,color=dg] at (3.2,4) {\small Constraints defining
+%%           $\manifold$};
+%%         \node [text width = 3cm,text centered] at (3,1.5)
+%%               { Configuration task towards $q_{rand}$};    
+%%       \end{scriptsize}
 
 
-\end{tikzpicture}
+%% \end{tikzpicture}
 \end{minipage}
 
-\caption{One step of constrained extension, and the stack of tasks used
-  to generate $q_{rand}'$ with a prioritized inverse kinematics solver, 
-  starting from $q_{near}$:
-  first, the constraints defining $\manifold$, and at a lower priority
-  a configuration task towards $q_{rand}$.  $q_{rand}'$ is then projected onto
-  $\manifold$, and a classic RRT extension tries to go as far as possible
-  from $q_{near}$ towards $q_{rand}''$.}
+\caption{\textbf{One step of constrained extension illustrating
+    Algorithm \ref{alg:constrained}: $q_{rand}$ is first projected on
+    the tangent space of $\manifold$. $q_{rand}'$ is then projected
+    onto $\manifold$, and a classic RRT extension tries to go as far
+    as possible from $q_{near}$ towards $q_{rand}''$ while remaining
+    on $\manifold$. $q_{new}$ is then returned.}}
 \label{fig:gikrrt}
 \end{figure}
 
@@ -1102,15 +1104,22 @@ physical capacities of the robot.
 \label{sec:ssc-application}
 
 
-The  algorithm   that  animates  a  statically  balanced   path  into  a
-dynamically balanced  walk trajectory has been inspired  by the previous
-small-space controllability  proof.
-Given a statically  balanced path $p$ respecting the cart-table model approximation constraints,
-we  start  by placing  footprints  corresponding  to  the nominal  walk
-pattern  of the  robot. Given the footprints, we  compute a ZMP trajectory, 
-and a preview controller outputs  a corresponding CoM trajectory. 
-The stack of tasks applied to
-the robot to generate a dynamic walk motion is -- in decreasing priority order:
+The algorithm that animates a statically balanced path into a
+dynamically balanced walk trajectory has been inspired by the previous
+small-space controllability proof. \textbf{Given a statically balanced
+  path $p$ verifying the cart-table model approximation constraints,
+  we start by placing footprints corresponding to the nominal walk
+  pattern of the robot. Given the footprints, we compute a ZMP
+  trajectory, derive foot trajectories, and a preview controller
+  outputs a corresponding CoM trajectory. Classic numerical
+  Jacobian-based prioritized inverse kinematics methods prove to be
+  very useful to generate a dynamic walking trajectory while trying to
+  accomplish secondary tasks, such as following a reference
+  configuration trajectory. We use the same framework which was
+  developped in \cite{yoshida2006tds}.}
+
+The stack of tasks applied to the robot to generate a dynamic walking
+motion is -- in decreasing priority order:
 
 \begin{enumerate}
 
@@ -1168,7 +1177,8 @@ part of an open-source package, available at
 
 \STATE $StackOfTasks$.addConfigurationTask($p$)
 
-\STATE $DynamicTrajectory \leftarrow \text{Animate}(StackOfTasks)$
+\STATE $DynamicTrajectory \leftarrow
+\text{ComputeWalkTrajectory}(StackOfTasks)$
 
 \IF{(CheckForCollisions($DynamicTrajectory$) = Colliding)}
 
