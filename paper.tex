@@ -398,7 +398,8 @@ constrained motion planning.
   constant for all scenarios in this work.}
 
 \begin{algorithm}
-\caption{\texttt{SolveConstraints}($q$, f, $\varepsilon$): find $q$ such that $f(q) = 0$}
+\caption{\texttt{SolveConstraints}($q$, f, $\varepsilon$): find $q$
+  such that $f(q) = 0$}
 \label{algo:newton}
 \begin{algorithmic}
 \STATE $i=0$
@@ -424,7 +425,7 @@ The way we generate a goal configuration is the following:
 \begin{enumerate}
 \item \textbf{Shoot a random configuration $q_{rand}$ in $\mathcal{C}$ with
   uniform distribution.}
-\item \textbf{Call SolveConstraints (Algorithm~\ref{algo:newton}) on
+\item \textbf{Call \texttt{SolveConstraints} (Algorithm~\ref{algo:newton}) on
   $q_{rand}$, with $f(q)$ defined by the intersection of the planning
   and goal manifolds $\manifold \cap \goalmanifold$.}
 \item If success, check for collisions.
@@ -602,7 +603,7 @@ are not very costly if the edge is close to the constrained manifold.
 
 
 \begin{algorithm}[h]
-  \caption{ConstrainedExtend($\mathcal{T},q_{near},q_{rand},f,\epsilon$)}
+  \caption{\texttt{ConstrainedExtend}($\mathcal{T},q_{near},q_{rand},f,\epsilon$)}
   \label{alg:constrained}
   \begin{algorithmic}
     \STATE {\color{red} // $I$ denotes the identity matrix.}
