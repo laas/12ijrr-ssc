@@ -298,14 +298,14 @@ robot.
   $dim(\mathcal{C})=n+6$. A configuration $q$ of $\mathcal{C}$ is said
   to be valid iff, besides being collision-free, it lies on a specific
   submanifold $\manifold$ of $\mathcal{C}$. $\manifold$ is called
-  the planning submanifold.}
+  the planning manifold.}
 
 The problem solved here differs from classic approaches in two ways:
 \begin{enumerate}
 \item the set of valid configurations is defined implicitly, as the
   set of collision-free configurations satisfying a given set of
   inverse kinematics balance constraints;
-\item the goal submanifold $\goalmanifold$ is also defined implicitly,
+\item the goal manifold $\goalmanifold$ is also defined implicitly,
   by additional inverse kinematics constraints.
 \end{enumerate}
 \textbf{During global planning, we will consider several types of
@@ -361,7 +361,7 @@ and  goal configurations. This was first proposed in
 \cite{kuffner00rrtconnect}. Our formulation of manipulation planning does
 not include an explicit goal configuration, so it is not possible to directly grow
 a tree from the goal. To make use of the idea of growing multiple trees, we first
-randomly sample the goal submanifold and generate several goal configurations. Then, 
+randomly sample the goal manifold and generate several goal configurations. Then, 
 we grow random
 trees from the initial configuration and the random goal configurations. The idea of
 generating several goals for manipulation planning was proposed in \cite{diankov2008bpc}.
