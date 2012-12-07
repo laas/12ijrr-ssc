@@ -1071,19 +1071,21 @@ the proof.
 
 
 \subsubsection{Remarks}
-\paragraph{Generalization to a complete model:} More work is needed to generalize 
-the previous proof to any legged robot model. First, because we use a model with
-a point mass, we did not have to consider the angular momentum of the robot
-around the CoM, while it accounts for dynamic balance. Moreover, when considering
-an actual kinematic and dynamic model,
-the positions of feet and CoM are not controlled DoFs, but inputs 
-for inverse kinematic tasks. Continuity and regularity results about the robot
-controller -- i.e. how much the configuration changes when the input of an inverse
-kinematics task changes--, would be needed to generalize the proof. We have not
-proven such properties for the inverse kinematics controller we use. 
-The  proof presented above still gives the intuition for the
-algorithm presented in the following.
-
+\paragraph{Generalization to a complete model:} 
+\textbf{We did not extend the previous proof to any legged robot model
+  since empirically, the table cart model is a very good fit for our
+  humanoid robot. Although of little practical interest, the
+  generalization of the proof does not seem very difficult to
+  achieve. As an insight, the difference between the table cart model
+  and the full size humanoid robot is due to the derivative of the
+  angular momentum and to the vertical acceleration of the center of
+  mass. These perturbations can be made as small as desired along the
+  sliding path by following the sliding path as slowly as
+  necessary. The derivatives of the angular momentum produced by the
+  stepping motion can also be made as small as desired by making the
+  step height as small as necessary and by using recent results on
+  properties of joint trajectories induced by end-effector motions
+  \cite{Zanchettin6084763}.}
 
 \paragraph{Use of ZMP preview controller:} The control strategy presented in the  
 previous proof may
