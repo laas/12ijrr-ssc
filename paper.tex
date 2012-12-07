@@ -382,7 +382,7 @@ constrained motion planning.
 
 \textbf{We show here how a multiple constraint solver works: its
   purpose is to find the root $q$ of a non-linear $C^1$ function
-  $f(q)$ with a tolerance of $\varepsilon$. If we want to find a
+  $f(q)$ with a tolerance of $\epsilon$. If we want to find a
   configuration on a manifold $\manifold$, $f(q)$ can be defined as a
   vector valued function that contains the concatenation of all
   constraints defining $\manifold$. Note that as the intersection of
@@ -406,25 +406,25 @@ constrained motion planning.
   cutoff number of iterations $it_{max}$ is hence introduced to bypass
   these cases.}
 
-\textbf{We observed that values of $\varepsilon=10^{-6}$,
+\textbf{We observed that values of $\epsilon=10^{-6}$,
   $\alpha=0.1$, $\alpha_{max}=0.95$ and $w=0.8$ lead to good behavior,
   i.e. fast convergence and low failure rate. These values are kept
   constant for all scenarios in this work.}
 
 \begin{algorithm}
-\caption{\texttt{SolveConstraints}($q$, f, $\varepsilon$): find $q$
+\caption{\texttt{SolveConstraints}($q$, f, $\epsilon$): find $q$
   such that $f(q) = 0$}
 \label{algo:newton}
 \begin{algorithmic}
 \STATE $i=0$
-\WHILE{$\|f(q)\| > \varepsilon$ and $i\leq it_{max}$}
+\WHILE{$\|f(q)\| > \epsilon$ and $i\leq it_{max}$}
 \STATE {\color{red} // $\left(.\right)^{+}$ denotes the Moore-Penrose pseudo-inverse}
 \STATE $q \leftarrow$ $q - \alpha \left(\frac{\partial f}{\partial q}(q)\right)^{+} f(q)$
 \STATE $i$ $\leftarrow$ $i+1$
 \STATE {\color{red}// Make $\alpha$ tend toward $\alpha_{max}$}
 \STATE $\alpha \rightarrow \alpha_{max} - w(\alpha_{max} - \alpha)$
 \ENDWHILE
-\IF {$\|f(q)\| \leq \varepsilon$}
+\IF {$\|f(q)\| \leq \epsilon$}
 \STATE return $q$
 \ELSE
 \STATE return failure
@@ -569,6 +569,7 @@ probabilisticaly complete. This proof applies to our algorithm. }
 \node [draw,circle,inner sep=2pt] (qr1) at (367,99) {};
 \node [left = 0.2cm] at (qr1) {$q_{rand}$};
 \draw [dashed,thin] (qn) -- (450,277);
+\node [right = 0.2cm] at (450,277) {\small{$T_q\manifold$}};
 \node [draw,circle,inner sep=2pt] (qr2) at (367,277) {};
 \node [below right = 0.1cm] at (qr2) {$q_{rand}'$};
 \node [draw,circle,inner sep=2pt,fill = gray] (qr3) at (345,225) {};
@@ -612,38 +613,29 @@ probabilisticaly complete. This proof applies to our algorithm. }
 
 \caption{\textbf{One step of constrained extension illustrating
     Algorithm \ref{alg:constrained}: $q_{rand}$ is first projected on
-    the tangent space of $\manifold$. $q_{rand}'$ is then projected
-    onto $\manifold$, and a classic RRT extension tries to go as far
-    as possible from $q_{near}$ towards $q_{rand}''$ while remaining
-    on $\manifold$. $q_{new}$ is then returned.}}
+    $T_q\manifold$ the tangent space of $\manifold$. $q_{rand}'$ is
+    then projected onto $\manifold$. A classic RRT extension tries to
+    go as far as possible from $q_{near}$ towards $q_{rand}''$ while
+    remaining on $\manifold$. $q_{new}$ is then returned.}}
 \label{fig:gikrrt}
 \end{figure}
-
-
-
-
 
 \begin{algorithm}[h]
   \caption{\texttt{ConstrainedExtend}($\mathcal{T},q_{near},q_{rand},f,\epsilon$)}
   \label{alg:constrained}
   \begin{algorithmic}
-    \STATE {\color{red} // $I$ denotes the identity matrix.}
-    \STATE $q_{rand}' \leftarrow q_{near} +   
-    \left(I -  
-    \left(\frac{\partial f}{\partial q}(q_{near})\right)^{+}
-    \frac{\partial f}{\partial q}(q_{near})\right) (q_{rand} - q_{near})$
-    \IF {$\texttt{SolveConstraints}(q_{rand}',f,\epsilon) = q_{rand}''$}
-    \STATE RRT::Extend($\mathcal{T},q_{near},q_{rand}''$)
-    \ENDIF
+    \STATE $d \leftarrow$ \texttt{Distance}($q_{near}, q_{rand}$)
+    \STATE $q \leftarrow$ $q_{near}$
+    \WHILE{$d > \epsilon$}
+    \STATE $q_{rand}' \leftarrow$ \texttt{OrthogonalProject}($q_{rand}, T_q\manifold$)
+    \STATE $q_{rand}'' \leftarrow$ \texttt{SolveConstraints}($q_{rand}',f,\epsilon$)
+    \STATE $d \leftarrow$ \texttt{Distance}($q,q_{rand}''$)
+    \STATE $q \leftarrow q_{rand}''$
+    \ENDWHILE
+    \STATE $q_{new} \leftarrow$ RRT::Extend($\mathcal{T},q_{near},q_{rand}''$)
   \end{algorithmic}
 \end{algorithm}
-
-
-
-
-
-
-
+    
 \subsection{Example}
 
 \textbf{We present in Fig.~\ref{fig:wb-shelves} an illustration of the
