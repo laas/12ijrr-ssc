@@ -1,3 +1,36 @@
+# README:
+#
+# This file contains a concatenation of all benchmark results that
+# were used to generate the plots included in the appendix.
+#
+# Explanation of each column:
+# test_id(0): planning problem run id
+# nb_it(1): number of rrt iterations
+# time(2): total computation time (s)
+# mean_time(3): mean iteration computation time (s)
+# std_time(4): standard deviation of iteration computation time (s)
+# min_time(5): minimum iteration computation time (s)
+# max_time(6): maximum iteration computation time (s)
+# nb_diffusion_it(7): number of diffusions
+# diffusion_time(8): total diffusion time (s)
+# mean_diffusion_time(9): mean diffusion computation time (s)
+# std_diffusion_time(10): standard deviation of diffusion time (s)
+# min_diffusion_time(11): minimum diffusion time (s)
+# max_diffusion_time(12): maximum diffusion time (s)
+# nb_extension_it(13): number of extensions
+# extension_time(14): mean diffusion computation time (s)
+# mean_extension_time(15): mean extension time (s)
+# std_extension_time(16): standard deviation of extension time (s)
+# min_extension_time(17): minimum extension time (s)
+# max_extension_time(18): maximum extension time (s)
+# nb_nodes(19): number of nodes in final tree
+# path_lenth(20): solution path length
+# nb_path_config(21): number of nodes (milestones) in the solution path
+# optim_time(22): Random optimization computation time (s)
+# optim_path_length(23): Optimized path length
+# nb_optim_path_config(24): number of nodes (milestones) in the optimized path
+# failure ratio: Ratio of failed planning runs over total planning runs.
+
 ##########
 # Chairs #
 ##########
